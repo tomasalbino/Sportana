@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportana | Registro de federación</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="index.html" class="logo">
+        <img src="imgs/logo.png" alt="Sportana" class="logo-img">
+        <span>Sportana</span>
+      </a>
+
+        <ul class="apart">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="deportes.html">Deportes</a></li>
+
+        </ul>
+
+        <div class="auth-buttons">
+          <a href="login.html" class="btn-login">Iniciar sesión</a>
+          <a href="registro.html" class="btn-registro">Registrarse</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="auth-seccion">
+    <div class="auth">
+      <div class="auth-intro">
+        <h1>Registrá tu federación en <span class="nombre">Sportana</span></h1>
+        <p>Administrá los torneos oficiales de tu disciplina desde una sola plataforma.</p>
+      </div>
+
+      <div class="auth-panel">
+        <div class="auth-panel-header">
+          <i class="fa-solid fa-building-shield"></i>
+          <h2>Registro de federación</h2>
+          <p>Completá los datos de tu institución para comenzar</p>
+        </div>
+
+        <form class="auth-form" action="procesar_registro_federacion.php" method="post" id="form-registro-fed">
+          <div id="mensaje-registro-fed" style="display:none; padding:10px 14px; border-radius:6px; margin-bottom:14px; font-size:14px;"></div>
+          <div class="campo">
+            <label for="nombre-federacion">Nombre de la federación</label>
+            <div class="campo-icono">
+              <i class="fa-solid fa-building-shield"></i>
+              <input type="text" id="nombre-federacion" name="nombre_federacion" placeholder="Ej: Federación Uruguaya de Ajedrez" autocomplete="organization" required>
+            </div>
+          </div>
+
+          <div class="campo-fila">
+            <div class="campo">
+              <label for="deporte-federacion">Deporte que representa</label>
+              <div class="filtro-select">
+                <i class="fa-solid fa-futbol icono-izq"></i>
+                <select id="deporte-federacion" name="deporte_federacion">
+                  <option>Fútbol</option>
+                  <option>Básquetbol</option>
+                  <option>Ajedrez</option>
+                  <option>Tenis</option>
+                  <option>Voleibol</option>
+                  <option>Boxeo</option>
+                  <option>Lucha</option>
+                  <option>Karate</option>
+                  <option>Tenis de mesa</option>
+                  <option>Natación</option>
+                  <option>Tiro con arco</option>
+                  <option>Counter-Strike 2</option>
+                  <option>MMA</option>
+                  <option>Valorant</option>
+                  <option>Pádel</option>
+                  <option>Billar</option>
+                </select>
+                <i class="fa-solid fa-chevron-down flecha"></i>
+              </div>
+            </div>
+            <div class="campo">
+              <label for="rut-federacion">RUT</label>
+              <div class="campo-icono">
+                <i class="fa-regular fa-id-card"></i>
+                <input type="text" id="rut-federacion" name="rut" placeholder="000000000000" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="representante-federacion">Nombre del representante legal</label>
+            <div class="campo-icono">
+              <i class="fa-regular fa-user"></i>
+              <input type="text" id="representante-federacion" name="representante" placeholder="Nombre y apellido" autocomplete="name" required>
+            </div>
+          </div>
+
+          <div class="campo-fila">
+            <div class="campo">
+              <label for="correo-federacion">Correo institucional</label>
+              <div class="campo-icono">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" id="correo-federacion" name="correo_federacion" placeholder="contacto@federacion.uy" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="campo">
+              <label for="telefono-federacion">Teléfono de contacto</label>
+              <div class="campo-icono">
+                <i class="fa-solid fa-phone"></i>
+                <input type="tel" id="telefono-federacion" name="telefono" placeholder="09X XXX XXX" autocomplete="tel" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="contra-federacion">Contraseña</label>
+            <div class="campo-icono">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="contra-federacion" name="contrasena" placeholder="********" autocomplete="new-password" required>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="confirmar-contra-federacion">Confirmar contraseña</label>
+            <div class="campo-icono">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="confirmar-contra-federacion" name="confirmar_contrasena" placeholder="********" autocomplete="new-password" required>
+            </div>
+          </div>
+
+          <button class="btn-registro btn-full" type="submit">Registrar federación</button>
+
+          <p class="auth-alt">¿Tu federación ya tiene una cuenta? <a href="login-federacion.html" class="link-primario">Iniciá sesión aquí</a></p>
+          <p class="auth-alt">¿No sos una federación? <a href="registro.html" class="link-primario">Registrate como participante</a></p>
+        </form>
+        <script>
+          document.getElementById('form-registro-fed').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var msg = document.getElementById('mensaje-registro-fed');
+            fetch('procesar_registro_federacion.php', { method: 'POST', body: new FormData(this) })
+              .then(function (r) { return r.json(); })
+              .then(function (data) {
+                msg.style.display = 'block';
+                if (data.ok) {
+                  msg.style.background = '#e6f4ea';
+                  msg.style.color = '#1e7e34';
+                  msg.textContent = 'Cuenta de federación creada correctamente. Ya podés iniciar sesión.';
+                } else {
+                  msg.style.background = '#fdecea';
+                  msg.style.color = '#c0392b';
+                  msg.textContent = data.error;
+                }
+              })
+              .catch(function () {
+                msg.style.display = 'block';
+                msg.style.background = '#fdecea';
+                msg.style.color = '#c0392b';
+                msg.textContent = 'No se pudo conectar con el servidor. Intentá nuevamente.';
+              });
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <div class="footer-contenedor">
+
+      <div class="footer-logo">
+        <img src="imgs/logo.png" alt="Sportana">
+        <h2>Sportana</h2>
+        <p>Organiza y administra torneos deportivos de forma simple y profesional.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Sportana</h3>
+        <a href="index.html">Inicio</a>
+        <a href="torneos.html">Explorar torneos</a>
+        <a href="crear.html">Crear torneo</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Recursos</h3>
+        <a href="torneos.html">Torneos</a>
+        <a href="deportes.html">Deportes</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Contacto</h3>
+        <a href="#">Instagram</a>
+        <a href="#">GitHub</a>
+        <a href="mailto:contacto@sportana.uy">Correo</a>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copy">© 2026 Sportana. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="creditos-empresa">
+    <p>Sitio web desarrollado por</p>
+    <img src="imgs/zenko-logo.png" alt="Zenko" class="logo-zenko">
+  </div>
+
+</body>
+</html>

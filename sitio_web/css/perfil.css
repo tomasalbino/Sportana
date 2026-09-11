@@ -1,0 +1,127 @@
+
+.volver{
+  margin: 20px 20px 0;
+}
+.perfil-cabecera{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  margin: 20px 20px;
+}
+.avatar-perfil{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  min-width: 96px;
+  border-radius: 50%;
+  background-color: #8B5CF6;
+  color: #FFFFFF;
+}
+.avatar-perfil span{
+  font-size: 30px;
+  font-weight: 700;
+}
+.datos-perfil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.nombre-rol{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.nombre-rol h1{
+  font-size: 21px;
+}
+.acciones-detalle{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+  width: 100%;
+}
+.acciones-detalle .btn-registro{
+  display: block;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+.guardar-detalle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #8B5CF6;
+  border-radius: 12px;
+  color: #8B5CF6;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .25s ease;
+}
+.guardar-detalle:hover{
+  background-color: #8B5CF6;
+  color: #FFFFFF;
+}
+.stats{
+  margin: 0 20px 24px;
+}
+.tab-torneo{
+  margin: 0 20px 20px;
+}
+.seccion-perfil .tarjeta-formulario{
+  margin: 0 20px 20px;
+}
+
+
+@media (min-width: 480px){
+  .nombre-rol h1{ font-size: 24px; }
+}
+
+
+@media (min-width: 768px){
+  .volver{ margin: 28px 40px 0; }
+  .perfil-cabecera{ margin: 28px 40px; }
+  .stats{ margin: 0 40px 28px; }
+  .tab-torneo{ margin: 0 40px 24px; }
+  .seccion-perfil .tarjeta-formulario{ margin: 0 40px 24px; }
+}
+
+@media (min-width: 1024px){
+  .perfil-cabecera{
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+  .datos-perfil{ align-items: flex-start; }
+  .nombre-rol{ flex-direction: row; align-items: center; }
+  .nombre-rol h1{ font-size: 28px; }
+  .acciones-detalle{ flex-direction: row; width: auto; }
+  .avatar-perfil{ width: 130px; height: 130px; min-width: 130px; }
+  .avatar-perfil span{ font-size: 40px; }
+
+    .volver{ margin-left: 80px; margin-right: 80px; }
+  .perfil-cabecera{ margin-left: 80px; margin-right: 80px; }
+  .stats{ margin-left: 80px; margin-right: 80px; }
+  .tab-torneo{ margin-left: 80px; margin-right: 80px; }
+  .seccion-perfil .tarjeta-formulario{ margin-left: 80px; margin-right: 80px; }
+}
+@media (min-width: 1280px){
+  .volver{ margin-left: 120px; margin-right: 120px; }
+  .perfil-cabecera{ margin-left: 120px; margin-right: 120px; }
+  .stats{ margin-left: 120px; margin-right: 120px; }
+  .tab-torneo{ margin-left: 120px; margin-right: 120px; }
+  .seccion-perfil .tarjeta-formulario{ margin-left: 120px; margin-right: 120px; }
+}

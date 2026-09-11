@@ -1,0 +1,170 @@
+erDiagram
+    %% ENTIDADES DEBILES (Mermaid no tiene notacion visual de doble
+    %% borde; quedan marcadas aca en texto): configuracion_torneo
+    %% depende de torneo, resultado depende de enfrentamiento. Ambas
+    %% con PK que ES la FK de su entidad fuerte (ver mas abajo).
+
+    %% GENERALIZACION (Mermaid no tiene triangulo ISA nativo; se
+    %% aproxima con una relacion 1 a 0..1 llamada "especializa"):
+    %% usuario se especializa en participante y federacion.
+
+    rol {
+        int id_rol PK
+        varchar nombre
+        int nivel_acceso
+    }
+
+    usuario {
+        int id_usuario PK
+        varchar nombre_usuario
+        varchar nombre
+        varchar correo
+        varchar password_hash
+        int id_rol FK
+        varchar ubicacion
+        datetime fecha_registro
+    }
+
+    participante {
+        int id_participante PK
+        int id_usuario FK
+        varchar apellido
+        varchar telefono
+    }
+
+    federacion {
+        int id_federacion PK
+        int id_usuario FK
+        varchar nombre
+        varchar deporte
+        varchar rut
+        varchar representante_legal
+        varchar telefono
+    }
+
+    equipo {
+        int id_equipo PK
+        varchar nombre
+        varchar categoria
+    }
+
+    equipo_participante {
+        int id_equipo PK,FK
+        int id_participante PK,FK
+        varchar rol_equipo
+    }
+
+    modulo_competencia {
+        int id_modulo PK
+        varchar nombre
+        boolean activo
+    }
+
+    torneo {
+        int id_torneo PK
+        varchar nombre
+        varchar deporte
+        int id_modulo FK
+        int id_organizador_usuario FK
+        int rondas_totales
+        varchar ubicacion
+        text descripcion
+        date fecha_inicio
+        date fecha_fin
+        date fecha_cierre_inscripcion
+        int cupo_minimo
+        int cupo_maximo
+        varchar estado
+        boolean es_publico
+        boolean requiere_aprobacion
+        boolean inscripciones_abiertas
+        varchar premio_primero
+        varchar premio_segundo
+        varchar premio_tercero
+        varchar premio_mvp
+    }
+
+    configuracion_torneo {
+        int id_torneo PK,FK
+        varchar criterio_puntuacion
+        varchar criterio_desempate
+        varchar duracion_partido
+        varchar politica_walkover
+        text reglas_disciplinarias
+        text reglas_adicionales
+    }
+
+    ronda {
+        int id_ronda PK
+        int id_torneo FK
+        int numero
+        date fecha
+        boolean cerrada
+    }
+
+    enfrentamiento {
+        int id_enfrentamiento PK
+        int id_ronda FK
+        int id_equipo_local FK
+        int id_equipo_visitante FK
+        datetime fecha_hora
+        varchar estado
+    }
+
+    resultado {
+        int id_enfrentamiento PK,FK
+        int marcador_local
+        int marcador_visitante
+        boolean validado
+    }
+
+    tabla_posiciones {
+        int id_tabla PK
+        int id_torneo FK
+        int id_equipo FK
+        int puntos
+        int partidos_jugados
+        int diferencia_gol
+        datetime ultima_actualizacion
+    }
+
+    inscripcion {
+        int id_inscripcion PK
+        int id_torneo FK
+        int id_participante FK
+        datetime fecha_inscripcion
+        varchar estado
+    }
+
+    auditoria {
+        int id_auditoria PK
+        int id_usuario FK
+        varchar accion
+        datetime fecha_hora
+    }
+
+    intento_login {
+        int id_intento PK
+        varchar nombre_usuario
+        datetime fecha_hora
+        boolean exitoso
+    }
+
+    rol ||--o{ usuario : "tiene"
+    usuario ||--o| participante : "especializa (participante)"
+    usuario ||--o| federacion : "especializa (federacion)"
+    equipo ||--o{ equipo_participante : "compone"
+    participante ||--o{ equipo_participante : "compone"
+    modulo_competencia ||--o{ torneo : "usa"
+    usuario |o--o{ torneo : "organiza"
+    torneo ||--|| configuracion_torneo : "configura"
+    torneo ||--o{ ronda : "genera"
+    ronda ||--o{ enfrentamiento : "incluye"
+    equipo ||--o{ enfrentamiento : "juega_local"
+    equipo |o--o{ enfrentamiento : "juega_visitante"
+    enfrentamiento ||--o| resultado : "produce"
+    torneo ||--o{ tabla_posiciones : "registra"
+    equipo ||--o{ tabla_posiciones : "aparece_en"
+    torneo ||--o{ inscripcion : "recibe"
+    participante ||--o{ inscripcion : "hace"
+    usuario ||--o{ auditoria : "realiza"

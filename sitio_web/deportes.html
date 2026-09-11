@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportana | Deportes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/deportes.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="index.html" class="logo">
+        <img src="imgs/logo.png" alt="Sportana" class="logo-img">
+        <span>Sportana</span>
+      </a>
+
+        <ul class="apart">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="deportes.html" class="activo">Deportes</a></li>
+    
+        </ul>
+
+        <div class="auth-buttons">
+          <a href="perfil.html" class="btn-login"><i class="fa-solid fa-circle-user"></i> Mi perfil</a>
+          <a href="login.html" class="btn-login">Iniciar sesión</a>
+          <a href="registro.html" class="btn-registro">Registrarse</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="deportes-hero">
+    <h1>Deportes disponibles en <span class="resaltado">Sportana</span></h1>
+    <p class="subtitulo">Conocé el reglamento oficial de cada disciplina y su compatibilidad con los formatos de torneo</p>
+  </section>
+
+  <section class="buscador-deportes">
+    <div class="buscador">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Buscar deporte...">
+    </div>
+  </section>
+
+  <section class="contenedor">
+  <div class="filtro-tarjeta">
+    <div class="filtro-grupo">
+      <label for="filtro-categoria">Categoría</label>
+      <div class="filtro-select">
+        <i class="fa-solid fa-layer-group icono-izq"></i>
+        <select id="filtro-categoria">
+          <option>Todas las categorías</option>
+          <option>Equipos</option>
+          <option>Individual</option>
+          <option>Combate</option>
+          <option>Esports</option>
+          <option>Raqueta</option>
+        </select>
+        <i class="fa-solid fa-chevron-down flecha"></i>
+      </div>
+    </div>
+
+    <button class="btn-filtro" type="button">
+      <i class="fa-solid fa-sliders"></i> Filtrar
+    </button>
+  </div>
+  </section>
+
+<section class="deportes-grid">
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/fubol.jpg" alt="Fútbol">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-futbol"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Fútbol</h3>
+                <p class="federacion">IFAB / FIFA</p>
+                <p class="descripcion-corta">El deporte más practicado del mundo. Dos equipos buscan marcar más goles que el rival respetando las reglas de la IFAB.</p>
+                <a href="#reglamento-futbol" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/basquete.jpg" alt="Básquetbol">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-basketball"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Básquetbol</h3>
+                <p class="federacion">FIBA</p>
+                <p class="descripcion-corta">Dos equipos de cinco jugadores intentan anotar en el aro rival respetando el reglamento de la FIBA.</p>
+                <a href="#reglamento-basquetbol" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/ajedrez.jpg" alt="Ajedrez">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-chess"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Ajedrez</h3>
+                <p class="federacion">FIDE</p>
+                <p class="descripcion-corta">Duelo de estrategia pura entre dos jugadores, sin intervención del azar, regulado por la FIDE.</p>
+                <a href="#reglamento-ajedrez" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/tenis.jpg" alt="Tenis">
+                <div class="icono-deporte">
+                   <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Tenis</h3>
+                <p class="federacion">ITF</p>
+                <p class="descripcion-corta">Duelo de precisión y resistencia regulado por la ITF, disputado en individuales o dobles.</p>
+                <a href="#reglamento-tenis" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/voley.jpg" alt="Voleibol">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-volleyball"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Voleibol</h3>
+                <p class="federacion">FIVB</p>
+                <p class="descripcion-corta">Dos equipos separados por una red buscan que el balón toque el suelo del campo rival, según el reglamento de la FIVB.</p>
+                <a href="#reglamento-voleibol" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/boxeo.jpg" alt="Boxeo">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-hand-fist"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Boxeo</h3>
+                <p class="federacion">World Boxing</p>
+                <p class="descripcion-corta">Combate de puños regulado por World Boxing, definido por puntuación o nocaut.</p>
+                <a href="#reglamento-boxeo" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/lucha.jpg" alt="Lucha">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-user-ninja"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Lucha</h3>
+                <p class="federacion">UWW</p>
+                <p class="descripcion-corta">Lucha libre y grecorromana reguladas por la UWW, definidas por puntos o por toque.</p>
+                <a href="#reglamento-lucha" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/karate.jpg" alt="Karate">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-hand-fist"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Karate</h3>
+                <p class="federacion">WKF (modalidad Kumite)</p>
+                <p class="descripcion-corta">La modalidad Kumite de la WKF enfrenta a dos competidores mediante técnicas de golpeo controladas.</p>
+                <a href="#reglamento-karate" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/tenis-mesa.jpg" alt="Tenis de mesa">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Tenis de mesa</h3>
+                <p class="federacion">ITTF</p>
+                <p class="descripcion-corta">Intercambios veloces sobre una mesa dividida por una red, regulados por la ITTF.</p>
+                <a href="#reglamento-tenis-mesa" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/natacion.jpg" alt="Natación">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-person-swimming"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Natación</h3>
+                <p class="federacion">World Aquatics</p>
+                <p class="descripcion-corta">Pruebas individuales y de relevos reguladas por World Aquatics, donde gana quien registra el menor tiempo.</p>
+                <a href="#reglamento-natacion" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/arco.jpg" alt="Tiro con arco">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Tiro con arco</h3>
+                <p class="federacion">World Archery</p>
+                <p class="descripcion-corta">Precisión a distancia regulada por World Archery, donde gana quien suma más puntos por flecha.</p>
+                <a href="#reglamento-tiro-arco" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/counter.jpg" alt="Counter-Strike 2">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-crosshairs"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Counter-Strike 2</h3>
+                <p class="federacion">Reglamento competitivo oficial / organizadores</p>
+                <p class="descripcion-corta">Esport 5 contra 5 de Valve donde Terroristas y Antiterroristas se disputan la plantación o desactivación de la bomba.</p>
+                <a href="#reglamento-counter-strike" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/mma.jpg" alt="MMA">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-hand-fist"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>MMA</h3>
+                <p class="federacion">Unified Rules of Mixed Martial Arts</p>
+                <p class="descripcion-corta">Artes marciales mixtas reguladas por las Unified Rules, combinando boxeo, lucha, jiu-jitsu y otras disciplinas.</p>
+                <a href="#reglamento-mma" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/valorant.jpg" alt="Valorant">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-crosshairs"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Valorant</h3>
+                <p class="federacion">VCT / Riot Games</p>
+                <p class="descripcion-corta">Disparos tácticos 5 contra 5 de Riot Games, con habilidades de agente y la Spike como objetivo central.</p>
+                <a href="#reglamento-valorant" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/padel.jpg" alt="Pádel">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Pádel</h3>
+                <p class="federacion">FIP</p>
+                <p class="descripcion-corta">Deporte de raqueta y paredes regulado por la FIP, disputado principalmente en dobles.</p>
+                <a href="#reglamento-padel" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+        <div class="deporte-card">
+            <div class="imagen-deporte">
+                <img src="imgs/billar.jpg" alt="Billar">
+                <div class="icono-deporte">
+                    <i class="fa-solid fa-circle"></i>
+                </div>
+            </div>
+            <div class="cuerpo-deporte">
+                <h3>Billar</h3>
+                <p class="federacion">UMB / WPA (modalidad Pool Bola 8)</p>
+                <p class="descripcion-corta">La modalidad Pool Bola 8, regulada por la WPA, es la más recomendable para un torneo de Sportana.</p>
+                <a href="#reglamento-billar" class="btn-ver-reglas">Ver reglas</a>
+            </div>
+        </div>
+  </section>
+
+  <section class="reglamentos">
+    <div class="reglamentos-intro">
+        <h2>Reglamentos Oficiales</h2>
+        <p>Reglas principales, infracciones y formas de ganar de cada disciplina, según su federación internacional.</p>
+    </div>
+      <article class="reglamento-card" id="reglamento-futbol">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-futbol"></i>
+            </div>
+            <div>
+                <h3>Fútbol</h3>
+                <span>IFAB / FIFA</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Deporte colectivo regulado por la International Football Association Board (IFAB) y administrado internacionalmente por la FIFA. Enfrenta a dos equipos cuyo objetivo es introducir el balón en la portería rival la mayor cantidad de veces posible durante el tiempo reglamentario.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Marcar más goles que el equipo contrario respetando todas las reglas oficiales. Un gol es válido cuando el balón cruza completamente la línea de meta entre los postes y debajo del travesaño.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>11 jugadores titulares por equipo (incluido un arquero obligatorio), entre 7 y 15 suplentes según la competición y hasta cinco sustituciones en la mayoría de los torneos. Si un equipo queda con menos de siete jugadores, el partido se suspende.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>Dos tiempos de 45 minutos con 15 minutos de descanso, más el tiempo adicional que agregue el árbitro. En competiciones eliminatorias puede haber prórroga de 30 minutos y definición por penales.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Campo rectangular de césped natural o artificial, con área penal, área de meta, punto penal, círculo central y líneas de banda y de meta.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>Camiseta, short, medias, canilleras y botines. El arquero debe vestir un uniforme diferente al resto del equipo y al árbitro.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>El encuentro comienza con un saque desde el centro del campo. Los jugadores pueden usar cualquier parte del cuerpo excepto brazos y manos; solo el arquero puede tocar el balón con las manos dentro de su propia área. Cuando el balón sale del campo se reanuda con saque de banda, de esquina o de meta.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>Está prohibido tocar deliberadamente el balón con la mano.</li>
+                        <li>Existe la regla del fuera de juego.</li>
+                        <li>Las entradas peligrosas constituyen falta.</li>
+                        <li>Una segunda tarjeta amarilla implica expulsión; la roja expulsa de forma directa.</li>
+                        <li>Las faltas dentro del área propia generan un penal.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Mano intencional.</li>
+                        <li>Fuera de juego.</li>
+                        <li>Juego brusco o entrada peligrosa.</li>
+                        <li>Pérdida deliberada de tiempo.</li>
+                        <li>Conducta antideportiva.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Marcando más goles que el rival.</li>
+                        <li>En la prórroga, si el torneo la contempla.</li>
+                        <li>Mediante la definición por penales.</li>
+                        <li>Por retiro o descalificación del equipo rival.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+     
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                            <span>Se utilizan habitualmente torneos todos contra todos con puntos por victoria, empate y derrota.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                            <span>Es uno de los formatos más usados en copas nacionales e internacionales.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-bad">
+                        <i class="fa-solid fa-xmark"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>Prácticamente no se utiliza en el fútbol profesional debido a la duración física de los encuentros.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-basquetbol">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-basketball"></i>
+            </div>
+            <div>
+                <h3>Básquetbol</h3>
+                <span>FIBA</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Deporte colectivo regulado por la Federación Internacional de Baloncesto (FIBA), donde dos equipos intentan introducir el balón dentro del aro contrario para sumar puntos.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Anotar más puntos que el rival durante el tiempo reglamentario.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>5 jugadores en cancha por equipo, hasta 7 suplentes en competiciones FIBA y cambios ilimitados durante las interrupciones del juego.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>4 cuartos de 10 minutos, con un descanso largo entre el segundo y el tercer cuarto y prórroga de 5 minutos en caso de empate.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Cancha rectangular con línea de triple, línea de tiros libres, aros a 3,05 metros de altura y zona restringida.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>Camiseta numerada, short, medias y calzado deportivo homologado, además del balón oficial reglamentario.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Cada equipo dispone de 24 segundos por posesión y 8 segundos para cruzar la mitad de la cancha. Los jugadores avanzan picando el balón y buscan anotar mediante lanzamientos desde distintas distancias.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>Máximo 24 segundos por posesión.</li>
+                        <li>Máximo 8 segundos para cruzar la mitad de la cancha.</li>
+                        <li>No se puede caminar sin picar el balón (pasos).</li>
+                        <li>Está prohibido el doble drible y el retroceso a campo propio.</li>
+                        <li>Cinco faltas personales eliminan al jugador.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Pasos.</li>
+                        <li>Doble drible.</li>
+                        <li>Campo atrás.</li>
+                        <li>Interferencia.</li>
+                        <li>Falta técnica o antideportiva.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Obtiene la victoria el equipo con más puntos al finalizar el partido, incluyendo la prórroga si es necesaria.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-bad">
+                        <i class="fa-solid fa-xmark"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>Es poco utilizado por la exigencia física de jugar varios partidos en poco tiempo.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-ajedrez">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-chess"></i>
+            </div>
+            <div>
+                <h3>Ajedrez</h3>
+                <span>FIDE</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Deporte de estrategia entre dos jugadores regulado por la Federación Internacional de Ajedrez (FIDE), donde no existe intervención del azar.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Dar jaque mate al rey adversario.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>Dos jugadores y un árbitro cuando corresponde.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>No existe un tiempo fijo de partida; depende del control de tiempo asignado por el torneo (clásico, rápido o blitz).</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Tablero de 64 casillas con 32 piezas en total: 16 por jugador (1 rey, 1 dama, 2 torres, 2 alfiles, 2 caballos y 8 peones).</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>No requiere equipamiento personal más allá del tablero y las piezas homologadas por el torneo.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Los jugadores mueven alternadamente sus piezas según reglas específicas de movimiento, buscando controlar el tablero y amenazar al rey rival.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>El rey nunca puede quedar en jaque.</li>
+                        <li>Existen movimientos especiales como el enroque, la captura al paso y la promoción del peón.</li>
+                        <li>Hay tablas por ahogado, por repetición de posición y por la regla de las cincuenta jugadas.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Realizar un movimiento ilegal.</li>
+                        <li>Tocar una pieza sin moverla, según la regla vigente en el torneo.</li>
+                        <li>Exceder el tiempo de reflexión asignado.</li>
+                        <li>Conducta antideportiva.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Jaque mate.</li>
+                        <li>Abandono del rival.</li>
+                        <li>Tiempo agotado del oponente.</li>
+                        <li>Descalificación del rival.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+        
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>Es el formato oficial más utilizado por la FIDE en torneos con gran cantidad de jugadores.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-tenis">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+            <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+            </div>
+            <div>
+                <h3>Tenis</h3>
+                <span>ITF</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Deporte regulado por la International Tennis Federation (ITF) que enfrenta a dos jugadores (individual) o cuatro (dobles), donde el objetivo es golpear la pelota sobre la red de forma que el rival no pueda devolverla correctamente.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Ganar puntos golpeando la pelota de manera que el adversario no pueda devolverla dentro de los límites de la cancha.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>Individual: 2 jugadores. Dobles: 4 jugadores.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>No posee un tiempo fijo; el partido finaliza cuando un jugador o pareja gana dos sets (la mayoría de los torneos) o tres sets en algunos Grand Slam masculinos.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Cancha rectangular dividida por una red, con líneas de fondo, laterales y cuadros de servicio delimitados según la superficie de juego.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>Raqueta homologada, pelotas oficiales, indumentaria y calzado deportivo específico para la superficie de juego.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Cada juego sigue el conteo 15, 30, 40 y juego. Si ambos llegan a 40 se produce un deuce, donde un jugador debe obtener dos puntos consecutivos para ganar el juego; los juegos forman sets y los sets determinan el ganador.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>El saque debe realizarse detrás de la línea de fondo y dentro del cuadro de servicio correspondiente.</li>
+                        <li>Se permiten dos intentos de saque.</li>
+                        <li>Si ambos jugadores igualan seis juegos puede disputarse un tie-break, según el reglamento del torneo.</li>
+                        <li>La pelota puede botar una sola vez antes de ser golpeada.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Falta de pie durante el saque.</li>
+                        <li>Doble falta.</li>
+                        <li>Pelota fuera de los límites.</li>
+                        <li>Dos botes consecutivos.</li>
+                        <li>Tocar la red durante el punto.</li>
+                        <li>Obstaculizar deliberadamente al rival.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Gana el jugador o pareja que obtiene la cantidad de sets establecida por el reglamento del torneo.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+          
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                            <span>Es el formato más utilizado en torneos profesionales.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>Compatible, especialmente en torneos amateurs o escolares.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-voleibol">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-volleyball"></i>
+            </div>
+            <div>
+                <h3>Voleibol</h3>
+                <span>FIVB</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Deporte colectivo regulado por la Federación Internacional de Voleibol (FIVB). Dos equipos separados por una red intentan enviar el balón al campo contrario sin que el rival pueda devolverlo correctamente.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Conseguir que el balón toque el suelo del campo rival o provocar una infracción del equipo contrario para sumar puntos.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>6 jugadores titulares por equipo, hasta 6 suplentes y un líbero especializado en defensa con reglas propias de ingreso y salida.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>Se juega al mejor de cinco sets. Los primeros cuatro finalizan al llegar a 25 puntos y el quinto a 15, siempre con una diferencia mínima de dos puntos.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Cancha de 18 por 9 metros, con una red de 2,43 m de altura en masculino y 2,24 m en femenino.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>Camiseta numerada, short, rodilleras (opcionales) y calzado deportivo. El líbero debe vestir un uniforme de color diferente.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Cada jugada comienza con un saque. Cada equipo dispone de un máximo de tres contactos para devolver el balón y un mismo jugador no puede realizar dos contactos consecutivos, salvo después de un bloqueo.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>Máximo tres toques por equipo.</li>
+                        <li>No se puede retener el balón.</li>
+                        <li>Está prohibido tocar la red durante la acción de juego.</li>
+                        <li>Los jugadores rotan en sentido horario al recuperar el saque.</li>
+                        <li>El saque debe realizarse desde detrás de la línea final.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Cuatro toques.</li>
+                        <li>Doble golpe.</li>
+                        <li>Retención del balón.</li>
+                        <li>Tocar la red.</li>
+                        <li>Invasión del campo rival.</li>
+                        <li>Falta de rotación.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Se obtiene la victoria al ganar tres sets.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+        
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                            <span>Es uno de los formatos más utilizados en campeonatos nacionales.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                            <span>Utilizado habitualmente en fases finales.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>Compatible, aunque poco frecuente en esta disciplina.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-boxeo">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-hand-fist"></i>
+            </div>
+            <div>
+                <h3>Boxeo</h3>
+                <span>World Boxing</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Deporte de combate regulado actualmente por World Boxing en competencias internacionales. Dos boxeadores compiten utilizando únicamente los puños protegidos con guantes.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Golpear legalmente al rival obteniendo mayor puntuación o finalizar el combate mediante nocaut.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>Dos boxeadores, un árbitro, entre tres y cinco jueces y personal médico.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>3 rounds de 3 minutos con 1 minuto de descanso en competencias amateur; las competencias profesionales pueden llegar hasta 12 rounds.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Ring cuadrado, con dimensiones que varían aproximadamente entre 4,9 y 6,1 metros de lado.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>Guantes oficiales, protector bucal, protector inguinal, vendajes y, en categorías amateur, casco según el reglamento.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Los boxeadores intentan conectar golpes válidos mientras evitan los ataques del rival mediante defensa y desplazamiento. El árbitro puede detener el combate si considera que un competidor no puede continuar.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>Solo se permiten golpes con el puño cerrado.</li>
+                        <li>No está permitido golpear la nuca ni por debajo de la cintura.</li>
+                        <li>No se puede sujetar continuamente al rival ni golpear cuando está caído.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Golpes ilegales.</li>
+                        <li>Conducta antideportiva.</li>
+                        <li>Escupir el protector bucal.</li>
+                        <li>Simular lesiones.</li>
+                        <li>Sujeción excesiva.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Decisión de los jueces.</li>
+                        <li>Nocaut (KO).</li>
+                        <li>Nocaut técnico (KO técnico).</li>
+                        <li>Abandono.</li>
+                        <li>Descalificación.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-bad">
+                        <i class="fa-solid fa-xmark"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                            <span>No es recomendable porque los boxeadores necesitan largos tiempos de recuperación entre combates.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                            <span>Es el formato oficial más utilizado.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-bad">
+                        <i class="fa-solid fa-xmark"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>No se utiliza en esta disciplina.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-lucha">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-user-ninja"></i>
+            </div>
+            <div>
+                <h3>Lucha</h3>
+                <span>UWW</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Deporte de combate regulado por United World Wrestling (UWW), que comprende principalmente dos modalidades oficiales: lucha libre y lucha grecorromana.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Derrotar al adversario mediante puntos o inmovilizando completamente ambos hombros sobre la lona.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>Dos luchadores.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>Dos períodos de tres minutos con un descanso de treinta segundos entre ambos.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Tapiz circular, dividido en zona central de combate y zona de protección.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>Malla o singlet reglamentario, calzado específico de lucha y protector bucal cuando corresponde.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Los luchadores buscan proyectar, controlar y derribar al rival. Cada técnica válida otorga una determinada cantidad de puntos.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>Se permiten derribos, proyecciones y controles.</li>
+                        <li>En lucha grecorromana está prohibido atacar las piernas.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Pasividad.</li>
+                        <li>Agarrar la ropa del rival.</li>
+                        <li>Técnicas peligrosas.</li>
+                        <li>Golpes.</li>
+                        <li>Conducta antideportiva.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Toque.</li>
+                        <li>Superioridad técnica.</li>
+                        <li>Mayor puntuación.</li>
+                        <li>Descalificación del rival.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-bad">
+                        <i class="fa-solid fa-xmark"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                            <span>No es habitual en esta disciplina.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-bad">
+                        <i class="fa-solid fa-xmark"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>No se utiliza en esta disciplina.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-karate">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-hand-fist"></i>
+            </div>
+            <div>
+                <h3>Karate</h3>
+                <span>WKF (modalidad Kumite)</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Deporte regulado por la World Karate Federation (WKF), que comprende dos modalidades oficiales: Kata y Kumite. En Sportana la modalidad compatible es Kumite, ya que enfrenta directamente a dos competidores.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Obtener mayor puntuación mediante técnicas válidas ejecutadas con precisión, potencia y control.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>Dos karatecas.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>3 minutos en la categoría masculina y 2 minutos en la femenina.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Tatami cuadrado de 8 por 8 metros.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>Karategi (uniforme) reglamentario, cinturón según el grado y protecciones homologadas para manos y pies.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Los competidores ejecutan técnicas de golpeo con control, sumando puntos según la técnica y la zona de impacto. El árbitro puede detener el combate en cualquier momento.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>Las técnicas deben ejecutarse con control.</li>
+                        <li>No está permitido golpear con fuerza excesiva.</li>
+                        <li>El sistema de puntuación otorga Yuko, Waza-ari e Ippon según la técnica realizada.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Contacto excesivo.</li>
+                        <li>Salir del área de combate.</li>
+                        <li>Pasividad.</li>
+                        <li>Conducta antideportiva.</li>
+                        <li>Técnicas prohibidas.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Mayor cantidad de puntos.</li>
+                        <li>Diferencia reglamentaria de puntos.</li>
+                        <li>Decisión arbitral.</li>
+                        <li>Descalificación del rival.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+        
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-bad">
+                        <i class="fa-solid fa-xmark"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                            <span>No es habitual en esta disciplina.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-bad">
+                        <i class="fa-solid fa-xmark"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>No se utiliza en esta disciplina.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-tenis-mesa">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+            </div>
+            <div>
+                <h3>Tenis de mesa</h3>
+                <span>ITTF</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Deporte regulado por la International Table Tennis Federation (ITTF) que enfrenta a dos jugadores (individual) o cuatro (dobles), quienes intercambian una pelota liviana sobre una mesa dividida por una red.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Ganar puntos haciendo que el adversario no pueda devolver correctamente la pelota o cometa una infracción.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>Modalidades individuales y de dobles, masculinas, femeninas y mixtas.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>El partido se juega al mejor de 5 o 7 sets. Cada set finaliza cuando un jugador alcanza 11 puntos con una diferencia mínima de dos.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Mesa oficial de 2,74 m de largo, 1,525 m de ancho y 76 cm de altura, con una red de 15,25 cm de altura.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>Raqueta homologada, pelota oficial de 40 mm, indumentaria y calzado deportivo.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Cada punto comienza con un saque reglamentario: la pelota debe botar primero en el propio campo, pasar sobre la red y botar en el campo contrario. Luego ambos jugadores intercambian golpes hasta que uno pierde el punto.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>Cada jugador realiza dos saques consecutivos.</li>
+                        <li>Si el marcador llega a 10-10, el saque alterna cada punto.</li>
+                        <li>La pelota únicamente puede botar una vez por lado.</li>
+                        <li>En dobles debe respetarse el orden alternado de golpeo.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Saque incorrecto.</li>
+                        <li>Doble bote.</li>
+                        <li>Golpear fuera de turno (dobles).</li>
+                        <li>Tocar la mesa con la mano libre.</li>
+                        <li>Obstruir la pelota.</li>
+                        <li>Pelota fuera de los límites.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Se obtiene la victoria ganando la cantidad de sets establecida por el torneo.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>Muy utilizado en torneos nacionales e internacionales.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-natacion">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-person-swimming"></i>
+            </div>
+            <div>
+                <h3>Natación</h3>
+                <span>World Aquatics</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Disciplina regulada por World Aquatics (anteriormente FINA), donde los nadadores compiten individualmente o por equipos de relevos intentando completar una distancia determinada en el menor tiempo posible.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Recorrer la distancia correspondiente antes que los demás competidores, respetando completamente el reglamento del estilo disputado.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>Pruebas individuales o relevos de cuatro nadadores; normalmente ocho competidores por serie.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>No existe un tiempo fijo; cada prueba finaliza cuando todos los competidores completan la distancia.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Piscinas oficiales de 50 metros (larga) o 25 metros (corta), con ocho o diez carriles.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>Traje de baño homologado, gorra y antiparras; en algunas pruebas se utilizan tacos de salida reglamentarios.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Los nadadores parten desde la plataforma de salida o desde el agua en el caso de espalda. Al sonar la señal comienza la prueba y el cronómetro se detiene cuando el nadador toca la pared de llegada.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>Cada estilo (libre, espalda, pecho, mariposa, combinado y relevos) posee movimientos específicos.</li>
+                        <li>No está permitido salir antes de la señal ni cambiar el estilo obligatorio.</li>
+                        <li>No se puede invadir el carril vecino ni impedir el avance de otro competidor.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Salida falsa.</li>
+                        <li>Giro incorrecto.</li>
+                        <li>Movimiento ilegal del estilo.</li>
+                        <li>No tocar la pared correctamente.</li>
+                        <li>Obstrucción a otro competidor.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Gana quien registra el menor tiempo oficial.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+          
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                            <span>Compatible mediante acumulación de puntos.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-bad">
+                        <i class="fa-solid fa-xmark"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>No suele utilizarse en esta disciplina.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-tiro-arco">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <div>
+                <h3>Tiro con arco</h3>
+                <span>World Archery</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Disciplina regulada por World Archery que consiste en disparar flechas hacia un blanco ubicado a una distancia determinada, buscando la mayor puntuación posible.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Acumular la mayor cantidad de puntos impactando lo más cerca posible del centro del blanco.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>Modalidad individual, por equipos o por equipos mixtos.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>No existe un tiempo fijo de competencia; se disputan series de flechas dentro de un tiempo de disparo limitado.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Distancia de disparo de 70 metros en la modalidad de arco recurvo olímpico.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>Arco homologado, flechas, protector de brazo, protector de dedos y carcaj.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Los arqueros disparan series de flechas y, al finalizar cada serie, se contabilizan los puntos obtenidos según la zona del blanco impactada.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>Cada flecha puede otorgar entre 1 y 10 puntos según la cercanía al centro.</li>
+                        <li>Debe respetarse el tiempo de disparo asignado.</li>
+                        <li>Solo puede dispararse cuando el juez lo indique.</li>
+                        <li>No se puede cruzar la línea de tiro.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Exceder el tiempo de disparo.</li>
+                        <li>Disparo anticipado.</li>
+                        <li>Conducta antideportiva.</li>
+                        <li>Uso de material no reglamentario.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Gana quien obtiene la mayor puntuación; en algunas modalidades se define mediante sets.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+           
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-bad">
+                        <i class="fa-solid fa-xmark"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>Es poco habitual en esta disciplina.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-counter-strike">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-crosshairs"></i>
+            </div>
+            <div>
+                <h3>Counter-Strike 2</h3>
+                <span>Reglamento competitivo oficial / organizadores</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Esport desarrollado por Valve en el que dos equipos de cinco jugadores compiten alternando los roles de terroristas y antiterroristas, bajo el reglamento competitivo oficial del juego y de los organizadores de cada torneo (ESL, BLAST, PGL, Perfect World, entre otros).</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Los Terroristas deben plantar la bomba o eliminar al equipo rival; los Antiterroristas deben impedir la plantación, desactivar la bomba o eliminar a los Terroristas.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>5 contra 5, con suplentes según el reglamento del torneo.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>Cada ronda dura aproximadamente 1 minuto y 55 segundos; los partidos suelen jugarse al mejor de 24 rondas (MR12).</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Mapas oficiales del pool competitivo vigente, cada uno con dos sitios donde puede plantarse la bomba.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>PC con el cliente oficial del juego, periféricos personales y software anti-cheat autorizado por el organizador.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Cada ronda comienza con tiempo de compra, donde los jugadores adquieren armas y equipamiento. Luego intentan cumplir el objetivo correspondiente a su rol.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>Existe una economía de dinero que se gestiona ronda a ronda.</li>
+                        <li>Los equipos cambian de lado a mitad de partido.</li>
+                        <li>El friendly fire se aplica según el reglamento del torneo.</li>
+                        <li>El tiempo de pausa está limitado.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Uso de trucos o software no autorizado.</li>
+                        <li>Aprovechamiento de errores del juego (bugs) prohibidos.</li>
+                        <li>Conducta antideportiva.</li>
+                        <li>Incumplimiento del reglamento del torneo.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Gana el primer equipo que consigue la cantidad reglamentaria de rondas; en caso de empate pueden jugarse prórrogas.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+          
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>Muy utilizado en la primera fase de los Majors.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-mma">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-hand-fist"></i>
+            </div>
+            <div>
+                <h3>MMA</h3>
+                <span>Unified Rules of Mixed Martial Arts</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Deporte de combate regulado principalmente por las Unified Rules of Mixed Martial Arts, utilizadas por organizaciones como UFC, Bellator y PFL, que combina técnicas de boxeo, jiu-jitsu brasileño, lucha, judo, muay thai, karate y otras disciplinas.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Derrotar al rival mediante nocaut, sumisión o decisión.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>Dos peleadores.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>Generalmente 3 rounds de 5 minutos; las peleas principales pueden disputarse a 5 rounds.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Octágono o jaula homologada.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>Guantes homologados, protector bucal, protector inguinal y vendajes reglamentarios.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Los competidores combinan golpes, derribos y técnicas de sumisión dentro del área de combate, siguiendo el reglamento de la organización.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>Se permiten golpes de puño, patadas, rodillas, codos, derribos y sumisiones.</li>
+                        <li>Está prohibido golpear la nuca, los ojos, morder, tirar del cabello, sujetar la reja o golpear la garganta.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Golpes a la nuca.</li>
+                        <li>Golpes a los ojos.</li>
+                        <li>Mordidas.</li>
+                        <li>Golpes bajos</li>
+                        <li>Tirar del cabello.</li>
+                        <li>Sujetar la reja.</li>
+                        <li>Golpear la garganta.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>KO.</li>
+                        <li>TKO.</li>
+                        <li>Sumisión.</li>
+                        <li>Decisión.</li>
+                        <li>Descalificación.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-bad">
+                        <i class="fa-solid fa-xmark"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                            <span>No es habitual en esta disciplina.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-bad">
+                        <i class="fa-solid fa-xmark"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>No se utiliza en esta disciplina.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-valorant">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-crosshairs"></i>
+            </div>
+            <div>
+                <h3>Valorant</h3>
+                <span>VCT / Riot Games</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Videojuego de disparos táctico en primera persona desarrollado por Riot Games. Se disputa entre dos equipos de cinco jugadores que alternan entre los bandos Atacantes y Defensores, con habilidades únicas para cada agente.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Los Atacantes deben colocar la Spike y defenderla hasta que explote, o eliminar al equipo rival. Los Defensores deben evitar su colocación, desactivarla o eliminar a los atacantes.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>5 jugadores titulares por equipo, suplentes según el reglamento del torneo y un entrenador autorizado.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>El formato competitivo oficial utiliza 24 rondas reglamentarias; gana el primer equipo que alcanza 13 rondas. En caso de empate 12-12 se disputa tiempo suplementario (Overtime).</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Mapas oficiales del pool competitivo, cada uno con sitios habilitados para la colocación de la Spike.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>PC con el cliente oficial del juego, periféricos personales y software anti-cheat autorizado por el organizador.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Cada ronda comienza con una fase de compra de armas, escudos y habilidades, seguida de la fase de combate. Si la Spike es colocada, comienza una cuenta regresiva hasta su explosión.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>Está prohibido utilizar programas externos o recibir ayuda externa durante la partida.</li>
+                        <li>Las pausas están reguladas.</li>
+                        <li>Los agentes solo pueden cambiarse antes del inicio del mapa.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Uso de cheats o software no autorizado.</li>
+                        <li>Aprovechamiento de bugs prohibidos.</li>
+                        <li>Conducta antideportiva.</li>
+                        <li>Abandono del encuentro.</li>
+                        <li>Suplantación de identidad.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Alcanzar las 13 rondas reglamentarias.</li>
+                        <li>Ganar el tiempo suplementario en caso de empate.</li>
+                        <li>Por descalificación del rival.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>Se utiliza en varias competiciones internacionales y regionales.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-padel">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+            </div>
+            <div>
+                <h3>Pádel</h3>
+                <span>FIP</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Deporte de raqueta regulado internacionalmente por la Federación Internacional de Pádel (FIP), que se juega principalmente en dobles sobre una pista cerrada con paredes de cristal y malla metálica que forman parte activa del juego.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Ganar puntos enviando la pelota al campo rival, evitando que los adversarios puedan devolverla correctamente.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>Dobles masculinos, femeninos o mixtos; la modalidad individual prácticamente no se utiliza en competiciones oficiales.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>Los partidos se disputan al mejor de tres sets. Cada set se gana llegando a seis juegos con una diferencia mínima de dos; en 6-6 suele disputarse un tie-break.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Pista de 20 metros de largo por 10 metros de ancho, donde las paredes forman parte del juego siempre que la pelota haya botado primero en el suelo.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>Paleta homologada, pelotas oficiales, calzado deportivo específico e indumentaria deportiva.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>Cada punto comienza con un saque realizado por debajo de la cintura. La pelota debe botar primero en el campo contrario y luego pueden utilizarse las paredes para devolverla.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>El saque siempre debe realizarse por debajo de la cintura.</li>
+                        <li>La pelota debe botar antes de tocar una pared.</li>
+                        <li>Solo puede botar una vez antes de ser golpeada.</li>
+                        <li>No puede tocar directamente la pared rival sin haber botado previamente.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Saque incorrecto.</li>
+                        <li>Doble bote.</li>
+                        <li>Golpear fuera de la pista.</li>
+                        <li>Tocar la red.</li>
+                        <li>Obstaculizar al rival.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Se obtiene la victoria al ganar dos sets.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+           
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                            <span>Muy frecuente en campeonatos abiertos.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>Puede utilizarse especialmente cuando participan muchas parejas.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+      <article class="reglamento-card" id="reglamento-billar">
+        <div class="reglamento-header">
+            <div class="icono-reglamento">
+                <i class="fa-solid fa-circle"></i>
+            </div>
+            <div>
+                <h3>Billar</h3>
+                <span>UMB / WPA (modalidad Pool Bola 8)</span>
+            </div>
+        </div>
+        <div class="reglamento-grid">
+                <div class="apartado">
+                    <div class="apartado-titulo">Descripción general</div>
+                    <p>Deporte de precisión regulado por la Union Mondiale de Billard (UMB) para el billar carambola y por la World Pool-Billiard Association (WPA) para modalidades como Bola 8, Bola 9 y Bola 10. La modalidad más popular, Pool Bola 8, es la más recomendable para Sportana.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Objetivo</div>
+                    <p>Embocar primero todas las bolas del grupo asignado (lisas o rayadas) y luego introducir legalmente la bola número 8 para ganar la partida.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Participantes</div>
+                    <p>Puede disputarse en forma individual o, con menor frecuencia, en dobles.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Duración</div>
+                    <p>No existe un tiempo oficial; el partido finaliza cuando un jugador gana la cantidad de partidas establecida por el torneo.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Área de juego</div>
+                    <p>Mesas homologadas de 7, 8 o 9 pies, según el modelo utilizado en la competición.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Equipamiento</div>
+                    <p>Taco homologado, bolas oficiales, tiza y triángulo para acomodar las bolas.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Desarrollo del juego</div>
+                    <p>El encuentro comienza con el saque y los jugadores alternan turnos intentando embocar sus bolas correspondientes. Mientras un jugador continúe embocando legalmente, conserva el turno.</p>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Reglas principales</div>
+                    <ul>
+                        <li>Primero deben embocarse todas las bolas asignadas antes de jugar la bola 8.</li>
+                        <li>Debe declararse el bolsillo donde se embocará la bola 8.</li>
+                        <li>No se puede introducir la bola blanca ni golpear primero una bola del rival.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Infracciones</div>
+                    <ul>
+                        <li>Embocar la bola blanca.</li>
+                        <li>Sacar una bola de la mesa.</li>
+                        <li>No golpear primero una bola legal.</li>
+                        <li>Embocar la bola 8 antes de tiempo o en un bolsillo distinto al declarado.</li>
+                    </ul>
+                </div>
+                <div class="apartado">
+                    <div class="apartado-titulo">Formas de ganar</div>
+                    <ul>
+                        <li>Embocar correctamente la bola 8.</li>
+                        <li>Que el rival cometa una infracción con pérdida automática de partida.</li>
+                        <li>Por abandono del rival.</li>
+                    </ul>
+                </div>
+        </div>
+        <div>
+            
+            <div class="compatibilidad-titulo">Compatibilidad con Sportana</div>
+            <div class="compatibilidad">
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Liga</span>
+                            <span>Es habitual en clubes de billar y asociaciones nacionales.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Eliminación directa</span>
+                            <span>Es el formato más utilizado en torneos abiertos y campeonatos oficiales.</span>
+                        </div>
+                    </div>
+                    <div class="compat-item compat-ok">
+                        <i class="fa-solid fa-check"></i>
+                        <div class="compat-texto">
+                            <span class="compat-nombre">Sistema suizo</span>
+                            <span>Muy utilizado en torneos con gran cantidad de jugadores.</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </article>
+  </section>
+
+  
+  <footer id="contacto">
+    <div class="footer-contenedor">
+
+      <div class="footer-logo">
+        <img src="imgs/logo.png" alt="Sportana">
+        <h2>Sportana</h2>
+        <p>Organiza y administra torneos deportivos de forma simple y profesional.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Sportana</h3>
+        <a href="index.html">Inicio</a>
+        <a href="torneos.html">Explorar torneos</a>
+        <a href="crear.html">Crear torneo</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Recursos</h3>
+        <a href="torneos.html">Torneos</a>
+        <a href="deportes.html">Deportes</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Contacto</h3>
+        <a href="#">Instagram</a>
+        <a href="#">GitHub</a>
+        <a href="mailto:contacto@sportana.uy">Correo</a>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copy">© 2026 Sportana. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="creditos-empresa">
+    <p>Sitio web desarrollado por</p>
+    <img src="imgs/zenko-logo.png" alt="Zenko" class="logo-zenko">
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportana | Ingreso de federación</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="index.html" class="logo">
+        <img src="imgs/logo.png" alt="Sportana" class="logo-img">
+        <span>Sportana</span>
+      </a>
+
+        <ul class="apart">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="deportes.html">Deportes</a></li>
+ 
+        </ul>
+
+        <div class="auth-buttons">
+          <a href="login.html" class="btn-login">Iniciar sesión</a>
+          <a href="registro.html" class="btn-registro">Registrarse</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="auth-seccion">
+    <div class="auth">
+      <div class="auth-intro">
+        <h1>Bienvenida de nuevo a <span class="nombre">Sportana</span></h1>
+        <p>Ingresá para seguir administrando los torneos oficiales de tu federación.</p>
+      </div>
+
+      <div class="auth-panel">
+        <div class="auth-panel-header">
+          <i class="fa-solid fa-building-shield"></i>
+          <h2>Ingreso de federación</h2>
+          <p>Ingresá con los datos de tu institución</p>
+        </div>
+
+        <form class="auth-form" action="procesar_login_federacion.php" method="post" id="form-login-fed">
+          <div id="mensaje-login-fed" style="display:none; padding:10px 14px; border-radius:6px; margin-bottom:14px; font-size:14px;"></div>
+          <div class="campo">
+            <label for="rut-login-federacion">RUT o correo institucional</label>
+            <div class="campo-icono">
+              <i class="fa-regular fa-id-card"></i>
+              <input type="text" id="rut-login-federacion" name="identificador_federacion" placeholder="000000000000 o contacto@federacion.uy" autocomplete="username" required>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="contra-login-federacion">Contraseña</label>
+            <div class="campo-icono">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="contra-login-federacion" name="contrasena" placeholder="********" autocomplete="current-password" required>
+            </div>
+          </div>
+
+          <a href="#" class="olvide">¿Olvidaste tu contraseña?</a>
+
+          <button class="btn-registro btn-full" type="submit">Ingresar</button>
+
+          <p class="auth-alt">¿Tu federación aún no tiene cuenta? <a href="registro-federacion.html" class="link-primario">Registrala aquí</a></p>
+          <p class="auth-alt">¿No sos una federación? <a href="login.html" class="link-primario">Iniciá sesión como participante</a></p>
+        </form>
+        <script>
+          document.getElementById('form-login-fed').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var msg = document.getElementById('mensaje-login-fed');
+            fetch('procesar_login_federacion.php', { method: 'POST', body: new FormData(this) })
+              .then(function (r) { return r.json(); })
+              .then(function (data) {
+                msg.style.display = 'block';
+                if (data.ok) {
+                  msg.style.background = '#e6f4ea';
+                  msg.style.color = '#1e7e34';
+                  msg.textContent = 'Inicio de sesión exitoso: ' + data.nombre;
+                } else {
+                  msg.style.background = '#fdecea';
+                  msg.style.color = '#c0392b';
+                  msg.textContent = data.error;
+                }
+              })
+              .catch(function () {
+                msg.style.display = 'block';
+                msg.style.background = '#fdecea';
+                msg.style.color = '#c0392b';
+                msg.textContent = 'No se pudo conectar con el servidor. Intentá nuevamente.';
+              });
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <div class="footer-contenedor">
+
+      <div class="footer-logo">
+        <img src="imgs/logo.png" alt="Sportana">
+        <h2>Sportana</h2>
+        <p>Organiza y administra torneos deportivos de forma simple y profesional.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Sportana</h3>
+        <a href="index.html">Inicio</a>
+        <a href="torneos.html">Explorar torneos</a>
+        <a href="crear.html">Crear torneo</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Recursos</h3>
+        <a href="torneos.html">Torneos</a>
+        <a href="deportes.html">Deportes</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Contacto</h3>
+        <a href="#">Instagram</a>
+        <a href="#">GitHub</a>
+        <a href="mailto:contacto@sportana.uy">Correo</a>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copy">© 2026 Sportana. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="creditos-empresa">
+    <p>Sitio web desarrollado por</p>
+    <img src="imgs/zenko-logo.png" alt="Zenko" class="logo-zenko">
+  </div>
+
+</body>
+</html>

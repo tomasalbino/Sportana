@@ -1,0 +1,81 @@
+
+.filtro-tarjeta{
+  margin-bottom: 24px;
+}
+
+
+.seccion-listado{
+  padding: 0 20px 20px;
+}
+.tab-torneo{
+  margin-bottom: 20px;
+}
+.orden-select{
+  position: relative;
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+}
+.orden-select select{
+  background-color: transparent;
+  border: none;
+  color: #B5B5C3;
+  font-size: 13px;
+  padding-right: 20px;
+  appearance: none;
+  cursor: pointer;
+  transition: .25s ease;
+}
+.orden-select select:hover{
+  color: #8B5CF6;
+}
+.orden-select .flecha{
+  position: absolute;
+  right: 0;
+  color: #6B6B78;
+  font-size: 11px;
+  pointer-events: none;
+}
+.contador-torneos{
+  color: #B5B5C3;
+  font-size: 13px;
+  margin: 0 0 16px;
+
+}
+
+.grid-torneos{
+  margin-bottom: 30px;
+}
+
+
+@media (min-width: 768px){
+  .encabezado-pagina{
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 40px;
+  }
+  .buscador{ width: 340px; }
+}
+
+@media (min-width: 768px){
+  .seccion-listado{ 
+    padding-left: 40px;
+     padding-right: 40px;
+   }
+}
+@media (min-width: 1024px){
+  .seccion-listado{ 
+    padding-left: 80px;
+     padding-right: 80px; }
+}
+@media (min-width: 1280px){
+  .seccion-listado{
+     padding-left: 120px;
+      padding-right: 120px; }
+      .contador-torneos{
+          margin-right: 120px;
+  margin-left: 120px;
+      }
+      
+}

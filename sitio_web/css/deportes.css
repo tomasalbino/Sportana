@@ -1,0 +1,300 @@
+
+.deportes-hero{
+  padding: 40px 20px 0;
+  text-align: center;
+}
+.deportes-hero h1{
+  font-size: 26px;
+  line-height: 1.25;
+}
+.deportes-hero .subtitulo{
+  color: #B5B5C3;
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 14px;
+  line-height: 1.6;
+}
+
+
+.buscador-deportes{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 32px;
+  padding: 0 20px;
+}
+
+.filtro-tarjeta{
+  margin-top: 20px;
+}
+
+.deportes-grid{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 40px 20px;
+}
+.deporte-card{
+  background-color: #0c0c1c;
+  border: 1px solid #14141c;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: .25s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.deporte-card:hover{
+  border-color: #8B5CF6;
+  background-color: rgba(139, 92, 246, .08);
+  transform: translateY(-6px);
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.imagen-deporte{
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: visible;
+}
+.imagen-deporte img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.icono-deporte{
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: #8B5CF6;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  border: 3px solid #0c0c1c;
+}
+.cuerpo-deporte{
+  padding: 32px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.cuerpo-deporte h3{
+  font-size: 17px;
+}
+.federacion{
+  color: #8B5CF6;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+.descripcion-corta{
+  color: #8B8B96;
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+}
+.btn-ver-reglas{
+  display: block;
+  margin-top: auto;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #8B5CF6;
+  border-radius: 10px;
+  color: #8B5CF6;
+  padding: 11px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .25s ease;
+}
+.btn-ver-reglas:hover{
+  background-color: #7C3AED;
+  border-color: #7C3AED;
+  color: #FFFFFF;
+}
+
+.reglamentos{
+  margin: 70px 20px 60px;
+}
+.reglamentos-intro h2{
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+.reglamentos-intro p{
+  color: #B5B5C3;
+  font-size: 14px;
+}
+.reglamento-card{
+  background-color: #12121A;
+  border: 1px solid #2A2A36;
+  border-radius: 16px;
+  padding: 24px 20px;
+  margin-top: 24px;
+  transition: .25s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.reglamento-card:hover{
+  border-color: #8B5CF6;
+  background-color: rgba(139, 92, 246, .08);
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.reglamento-header{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #2A2A36;
+}
+.icono-reglamento{
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background-color: rgba(139, 92, 246, .15);
+  color: #8B5CF6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+}
+.reglamento-header h3{
+  font-size: 18px;
+}
+.reglamento-header span{
+  display: block;
+  color: #8B8B96;
+  font-size: 12px;
+  margin-top: 3px;
+}
+.reglamento-grid{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.apartado-titulo{
+  display: flex;
+  color: #8B5CF6;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.apartado p{
+  color: #B5B5C3;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+.apartado ul{
+  color: #B5B5C3;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 18px;
+}
+.apartado li{
+  margin-bottom: 4px;
+}
+
+
+.compatibilidad-titulo{
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.compatibilidad{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid #2A2A36;
+}
+.compat-item{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: #0c0c1c;
+  border: 1px solid #2A2A36;
+  border-radius: 10px;
+  padding: 12px 14px;
+  flex: 1;
+  min-width: 200px;
+  transition: .25s ease;
+}
+.compat-item:hover{
+  border-color: #8B5CF6;
+}
+.compat-item i{
+  margin-top: 2px;
+  width: 16px;
+  text-align: center;
+}
+.compat-ok i{ color: #22C55E; }
+.compat-bad i{ color: #EF4444; }
+.compat-nombre{
+  display: block;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 600;
+}
+.compat-texto span:last-child{
+  display: block;
+  color: #8B8B96;
+  font-size: 12px;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+@media (min-width: 480px){
+  .deportes-grid{ flex-direction: row; flex-wrap: wrap; }
+  .deporte-card{ width: calc(50% - 12px); }
+}
+
+@media (min-width: 768px){
+  .deportes-hero h1{ font-size: 36px; }
+  .deportes-hero .subtitulo{ font-size: 16px; }
+  .buscador-deportes{ flex-direction: row; align-items: center; }
+  .buscador-deportes .buscador{ flex: 1; }
+  .deporte-card{ width: calc(33.333% - 16px); }
+  .reglamento-grid{ flex-direction: row; flex-wrap: wrap; }
+  .apartado{ width: calc(50% - 11px); }
+  .compatibilidad{ flex-direction: row; }
+}
+
+@media (min-width: 1024px){
+  .deportes-hero h1{ font-size: 44px; }
+  .reglamento-card{ padding: 32px 36px; }
+}
+
+@media (min-width: 1280px){
+  .deportes-hero h1{ font-size: 48px; }
+  .deporte-card{ width: calc(25% - 18px); }
+}
+
+@media (min-width: 768px){
+  .deportes-hero{ padding-left: 40px; padding-right: 40px; }
+  .buscador-deportes{ padding-left: 40px; padding-right: 40px; }
+  .deportes-grid{ margin-left: 40px; margin-right: 40px; }
+  .reglamentos{ margin-left: 40px; margin-right: 40px; }
+}
+@media (min-width: 1024px){
+  .deportes-hero{ padding-left: 80px; padding-right: 80px; }
+  .buscador-deportes{ padding-left: 80px; padding-right: 80px; }
+  .deportes-grid{ margin-left: 80px; margin-right: 80px; }
+  .reglamentos{ margin-left: 80px; margin-right: 80px; }
+}
+@media (min-width: 1280px){
+  .deportes-hero{ padding-left: 120px; padding-right: 120px; }
+  .buscador-deportes{ padding-left: 120px; padding-right: 120px; }
+  .deportes-grid{ margin-left: 120px; margin-right: 120px; }
+  .reglamentos{ margin-left: 120px; margin-right: 120px; }
+}

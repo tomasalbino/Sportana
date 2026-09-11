@@ -1,2 +1,1 @@
-# Sportana
-Sistema web deportivo - Proyecto UTULAB
+# Sportana — Programación Full Stack

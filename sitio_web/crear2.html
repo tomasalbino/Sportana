@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportana | Crear torneo · Paso 2 de 3</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/crear.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="index.html" class="logo">
+        <img src="imgs/logo.png" alt="Sportana" class="logo-img">
+        <span>Sportana</span>
+      </a>
+
+        <ul class="apart">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="deportes.html">Deportes</a></li>
+        
+        </ul>
+
+        <div class="auth-buttons">
+          <a href="perfil.html" class="btn-login"><i class="fa-solid fa-circle-user"></i> Mi perfil</a>
+          <a href="login.html" class="btn-login">Iniciar sesión</a>
+          <a href="registro.html" class="btn-registro">Registrarse</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="encabezado-pagina">
+    <div class="titulo">
+      <h1>Crear torneo</h1>
+      <p>Configurá los datos de tu nueva competencia</p>
+    </div>
+  </section>
+
+  <form class="form-torneo">
+
+    <div class="pasos">
+      <div class="paso hecho">
+        <span class="numero"><i class="fa-solid fa-check"></i></span>
+        <span>Datos y módulo</span>
+      </div>
+      <span class="linea-paso"></span>
+      <div class="paso activo">
+        <span class="numero">2</span>
+        <span>Detalles y premios</span>
+      </div>
+      <span class="linea-paso"></span>
+      <div class="paso">
+        <span class="numero">3</span>
+        <span>Participantes</span>
+      </div>
+    </div>
+
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-formulario">Detalles del torneo</h2>
+
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="ubicacion">Ubicación</label>
+          <input type="text" id="ubicacion" name="ubicacion" class="input-campo" placeholder="Ciudad, club o sede">
+        </div>
+      </div>
+
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="descripcion">Descripción</label>
+          <textarea id="descripcion" name="descripcion" class="textarea-campo" placeholder="Contales a los participantes de qué trata el torneo..."></textarea>
+        </div>
+      </div>
+
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="fecha-inicio">Fecha de inicio</label>
+          <input type="date" id="fecha-inicio" name="fecha-inicio" class="input-campo">
+        </div>
+        <div class="campo">
+          <label for="fecha-fin">Fecha de finalización</label>
+          <input type="date" id="fecha-fin" name="fecha-fin" class="input-campo">
+        </div>
+      </div>
+
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="fecha-cierre">Fecha de cierre de inscripción</label>
+          <input type="date" id="fecha-cierre" name="fecha-cierre" class="input-campo">
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-formulario">Reglamento</h2>
+      <p class="subtitulo-formulario">Reglas particulares de esta competencia</p>
+
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="criterio-puntuacion">Criterio de puntuación</label>
+          <input type="text" id="criterio-puntuacion" name="criterio-puntuacion" class="input-campo" placeholder="Ej: 3 puntos por victoria, 1 por empate, 0 por derrota">
+        </div>
+        <div class="campo">
+          <label for="criterio-desempate">Criterio de desempate</label>
+          <input type="text" id="criterio-desempate" name="criterio-desempate" class="input-campo" placeholder="Ej: diferencia de gol, luego enfrentamiento directo">
+        </div>
+      </div>
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="duracion-partido">Duración del partido</label>
+          <input type="text" id="duracion-partido" name="duracion-partido" class="input-campo" placeholder="Ej: 2 tiempos de 20 minutos">
+        </div>
+        <div class="campo">
+          <label for="politica-walkover">Política de walkover</label>
+          <input type="text" id="politica-walkover" name="politica-walkover" class="input-campo" placeholder="Ej: 3-0 en contra si no se presenta">
+        </div>
+      </div>
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="reglas-disciplinarias">Reglas disciplinarias</label>
+          <textarea id="reglas-disciplinarias" name="reglas-disciplinarias" class="textarea-campo" placeholder="Ej: 2 tarjetas amarillas = suspensión próxima fecha. Fair Play obligatorio."></textarea>
+        </div>
+      </div>
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="reglas-adicionales">Reglas adicionales</label>
+          <textarea id="reglas-adicionales" name="reglas-adicionales" class="textarea-campo" placeholder="Cualquier otra regla específica del torneo."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-formulario">Premios</h2>
+      <p class="subtitulo-formulario">Reconocimientos que recibirán los mejores puestos</p>
+
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="premio-primero">1er puesto</label>
+          <input type="text" id="premio-primero" name="premio-primero" class="input-campo" placeholder="Ej: Copa + medallas doradas">
+        </div>
+      </div>
+
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="premio-segundo">2do puesto</label>
+          <input type="text" id="premio-segundo" name="premio-segundo" class="input-campo" placeholder="Ej: Medallas plateadas">
+        </div>
+        <div class="campo">
+          <label for="premio-tercero">3er puesto</label>
+          <input type="text" id="premio-tercero" name="premio-tercero" class="input-campo" placeholder="Ej: Medallas de bronce">
+        </div>
+      </div>
+
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="premio-mvp">MVP del torneo</label>
+          <input type="text" id="premio-mvp" name="premio-mvp" class="input-campo" placeholder="Ej: Reconocimiento individual">
+        </div>
+      </div>
+    </div>
+
+    <div class="acciones-formulario">
+      <a href="crear.html" class="btn-login">Volver</a>
+      <a href="crear3.html" class="btn-registro" id="btn-siguiente-2">Siguiente</a>
+    </div>
+
+  </form>
+  <script>
+    document.getElementById('btn-siguiente-2').addEventListener('click', function (e) {
+      e.preventDefault();
+      var form = document.querySelector('.form-torneo');
+      var previo = JSON.parse(sessionStorage.getItem('sportana_crear_paso1') || '{}');
+      var datos = Object.assign({}, previo, {
+        ubicacion: form.ubicacion.value,
+        descripcion: form.descripcion.value,
+        'fecha-inicio': form['fecha-inicio'].value,
+        'fecha-fin': form['fecha-fin'].value,
+        'fecha-cierre': form['fecha-cierre'].value,
+        'criterio-puntuacion': form['criterio-puntuacion'].value,
+        'criterio-desempate': form['criterio-desempate'].value,
+        'duracion-partido': form['duracion-partido'].value,
+        'politica-walkover': form['politica-walkover'].value,
+        'reglas-disciplinarias': form['reglas-disciplinarias'].value,
+        'reglas-adicionales': form['reglas-adicionales'].value,
+        'premio-primero': form['premio-primero'].value,
+        'premio-segundo': form['premio-segundo'].value,
+        'premio-tercero': form['premio-tercero'].value,
+        'premio-mvp': form['premio-mvp'].value,
+      });
+      sessionStorage.setItem('sportana_crear_paso1', JSON.stringify(datos));
+      window.location.href = 'crear3.html';
+    });
+  </script>
+
+  <footer id="contacto">
+    <div class="footer-contenedor">
+
+      <div class="footer-logo">
+        <img src="imgs/logo.png" alt="Sportana">
+        <h2>Sportana</h2>
+        <p>Organiza y administra torneos deportivos de forma simple y profesional.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Sportana</h3>
+        <a href="index.html">Inicio</a>
+        <a href="torneos.html">Explorar torneos</a>
+        <a href="crear.html">Crear torneo</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Recursos</h3>
+        <a href="torneos.html">Torneos</a>
+        <a href="deportes.html">Deportes</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Contacto</h3>
+        <a href="#">Instagram</a>
+        <a href="#">GitHub</a>
+        <a href="mailto:contacto@sportana.uy">Correo</a>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copy">© 2026 Sportana. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="creditos-empresa">
+    <p>Sitio web desarrollado por</p>
+    <img src="imgs/zenko-logo.png" alt="Zenko" class="logo-zenko">
+  </div>
+
+</body>
+</html>

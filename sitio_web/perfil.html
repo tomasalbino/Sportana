@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportana | Mi perfil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="index.html" class="logo">
+        <img src="imgs/logo.png" alt="Sportana" class="logo-img">
+        <span>Sportana</span>
+      </a>
+
+        <ul class="apart">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="deportes.html">Deportes</a></li>
+         
+        </ul>
+
+        <div class="auth-buttons">
+          <a href="index.html" class="btn-login"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="volver">
+    <a href="index.html" class="btn-volver"><i class="fa-solid fa-arrow-left"></i> Volver al inicio</a>
+  </section>
+
+  <section class="perfil-cabecera">
+    <div class="avatar-perfil">
+      <span id="avatar-iniciales">MR</span>
+    </div>
+    <div class="datos-perfil">
+      <div class="nombre-rol">
+        <h1 id="perfil-nombre-completo">Mariana Rodríguez</h1>
+        <span class="categoria">Participante</span>
+      </div>
+      <p class="dato"><i class="fa-regular fa-envelope"></i> <span id="perfil-correo">mariana.rodriguez@correo.com</span></p>
+      <p class="dato"><i class="fa-solid fa-location-dot"></i> <span id="perfil-ubicacion">Montevideo</span></p>
+      <p class="dato"><i class="fa-regular fa-calendar"></i> <span id="perfil-miembro-desde">Miembro desde marzo de 2026</span></p>
+      <div class="acciones-detalle">
+        <a href="#datos-personales" class="btn-registro">Editar perfil</a>
+        <a href="torneos.html" class="guardar-detalle"><i class="fa-regular fa-bookmark"></i> Torneos guardados</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat-card">
+      <h2><i class="fa-solid fa-trophy"></i>4</h2>
+      <p>Torneos jugados</p>
+    </div>
+    <div class="stat-card">
+      <h2><i class="fa-solid fa-medal"></i>1</h2>
+      <p>Torneos ganados</p>
+    </div>
+    <div class="stat-card">
+      <h2><i class="fa-solid fa-people-group"></i>18</h2>
+      <p>Partidos jugados</p>
+    </div>
+    <div class="stat-card">
+      <h2><i class="fa-solid fa-ranking-star"></i>2°</h2>
+      <p>Mejor posición</p>
+    </div>
+  </section>
+
+  <section class="tab-torneo">
+    <div class="tab-grupo">
+      <button class="tab activo" type="button"><i class="fa-solid fa-layer-group"></i> Mis torneos</button>
+      <button class="tab" type="button"><i class="fa-regular fa-rectangle-list"></i> Resultados</button>
+      <button class="tab" type="button"><i class="fa-regular fa-user"></i> Editar perfil</button>
+    </div>
+  </section>
+
+  <section class="seccion-perfil">
+
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-formulario">Torneos en los que participo</h2>
+      <p class="subtitulo-formulario">Estado de tus inscripciones y competencias activas</p>
+      <div class="lista-equipos">
+        <div class="fila-equipo">
+          <span class="avatar-equipo">L</span>
+          <p>Liga Metropolitana 2026</p>
+          <span class="categoria">Básquetbol · Liga</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">C</span>
+          <p>Copa Primavera 2026</p>
+          <span class="categoria">Fútbol · Eliminación directa</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">G</span>
+          <p>Gran Maestro Open 2026</p>
+          <span class="categoria">Ajedrez · Sistema suizo</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">D</span>
+          <p>Desafío del Arquero 2026</p>
+          <span class="categoria">Tiro con arco · Liga</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-formulario">Últimos resultados</h2>
+      <p class="subtitulo-formulario">Últimos partidos jugados en tus torneos</p>
+
+      <div class="grupo-fixture">
+        <h3 class="subtitulo-fixture">Liga Metropolitana 2026 · Fecha 6</h3>
+        <div class="lista-partidos">
+          <div class="fila-partido">
+            <span class="equipo-partido">Halcones del Cerro</span>
+            <span class="resultado-partido">78 - 65</span>
+            <span class="equipo-partido">Jaguares de Punta Gorda</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grupo-fixture">
+        <h3 class="subtitulo-fixture">Copa Primavera 2026 · Octavos</h3>
+        <div class="lista-partidos">
+          <div class="fila-partido">
+            <span class="equipo-partido">Mariana Rodríguez</span>
+            <span class="resultado-partido">3 - 1</span>
+            <span class="equipo-partido">Nicolás Silva</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grupo-fixture">
+        <h3 class="subtitulo-fixture">Gran Maestro Open 2026 · Ronda 4</h3>
+        <div class="lista-partidos">
+          <div class="fila-partido">
+            <span class="equipo-partido">Mariana Rodríguez</span>
+            <span class="resultado-partido">1 - 0</span>
+            <span class="equipo-partido">Federico Ventura</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta-formulario" id="datos-personales">
+      <h2 class="titulo-formulario">Datos personales</h2>
+      <p class="subtitulo-formulario">Actualizá tus datos básicos</p>
+
+      <form id="form-datos-perfil">
+        <div class="fila-campos">
+          <div class="campo">
+            <label for="nombre-perfil">Nombre</label>
+            <input type="text" id="nombre-perfil" name="nombre-perfil" class="input-campo" value="Mariana">
+          </div>
+          <div class="campo">
+            <label for="apellido-perfil">Apellido</label>
+            <input type="text" id="apellido-perfil" name="apellido-perfil" class="input-campo" value="Rodríguez">
+          </div>
+        </div>
+
+        <div class="fila-campos">
+          <div class="campo">
+            <label for="correo-perfil">Correo electrónico</label>
+            <div class="campo-icono">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="correo-perfil" name="correo-perfil" value="mariana.rodriguez@correo.com" autocomplete="off">
+            </div>
+          </div>
+          <div class="campo">
+            <label for="ubicacion-perfil">Ubicación</label>
+            <input type="text" id="ubicacion-perfil" name="ubicacion-perfil" class="input-campo" value="Montevideo">
+          </div>
+        </div>
+
+        <div class="acciones-formulario">
+          <a href="index.html" class="btn-login">Cancelar</a>
+          <button class="btn-registro" type="submit">Guardar cambios</button>
+        </div>
+        <div id="mensaje-perfil" style="display:none; padding:10px 14px; border-radius:6px; margin-top:10px; font-size:14px;"></div>
+      </form>
+    </div>
+
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-formulario">Seguridad</h2>
+      <p class="subtitulo-formulario">Cambiá tu contraseña. Debe tener mínimo 8 caracteres, una mayúscula, una minúscula y un número.</p>
+
+      <form>
+        <div class="fila-campos">
+          <div class="campo">
+            <label for="contra-actual-perfil">Contraseña actual</label>
+            <div class="campo-icono">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="contra-actual-perfil" name="contra-actual-perfil" placeholder="********" autocomplete="current-password">
+            </div>
+          </div>
+        </div>
+
+        <div class="fila-campos">
+          <div class="campo">
+            <label for="contra-perfil">Nueva contraseña</label>
+            <div class="campo-icono">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="contra-perfil" name="contra-perfil" placeholder="********" autocomplete="new-password">
+            </div>
+          </div>
+          <div class="campo">
+            <label for="confirmar-contra-perfil">Confirmar nueva contraseña</label>
+            <div class="campo-icono">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="confirmar-contra-perfil" name="confirmar-contra-perfil" placeholder="********" autocomplete="new-password">
+            </div>
+          </div>
+        </div>
+
+        <div class="acciones-formulario">
+          <a href="index.html" class="btn-login">Cancelar</a>
+          <button class="btn-registro" type="submit">Actualizar contraseña</button>
+        </div>
+      </form>
+    </div>
+
+  </section>
+
+  <footer id="contacto">
+    <div class="footer-contenedor">
+
+      <div class="footer-logo">
+        <img src="imgs/logo.png" alt="Sportana">
+        <h2>Sportana</h2>
+        <p>Organiza y administra torneos deportivos de forma simple y profesional.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Sportana</h3>
+        <a href="index.html">Inicio</a>
+        <a href="torneos.html">Explorar torneos</a>
+        <a href="crear.html">Crear torneo</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Recursos</h3>
+        <a href="torneos.html">Torneos</a>
+        <a href="deportes.html">Deportes</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Contacto</h3>
+        <a href="#">Instagram</a>
+        <a href="#">GitHub</a>
+        <a href="mailto:contacto@sportana.uy">Correo</a>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copy">© 2026 Sportana. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="creditos-empresa">
+    <p>Sitio web desarrollado por</p>
+    <img src="imgs/zenko-logo.png" alt="Zenko" class="logo-zenko">
+  </div>
+
+  <script>
+    var MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+
+    function iniciales(nombre, apellido) {
+      return ((nombre[0] || '') + (apellido[0] || '')).toUpperCase();
+    }
+
+    fetch('obtener_perfil.php')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (!data.ok) {
+          window.location.href = 'login.html';
+          return;
+        }
+        var p = data.perfil;
+        document.getElementById('perfil-nombre-completo').textContent = p.nombre + ' ' + p.apellido;
+        document.getElementById('perfil-correo').textContent = p.correo;
+        document.getElementById('perfil-ubicacion').textContent = p.ubicacion || 'Sin especificar';
+        document.getElementById('avatar-iniciales').textContent = iniciales(p.nombre, p.apellido);
+
+        var fecha = new Date(p.fecha_registro.replace(' ', 'T'));
+        document.getElementById('perfil-miembro-desde').textContent = 'Miembro desde ' + MESES[fecha.getMonth()] + ' de ' + fecha.getFullYear();
+
+        document.getElementById('nombre-perfil').value = p.nombre;
+        document.getElementById('apellido-perfil').value = p.apellido;
+        document.getElementById('correo-perfil').value = p.correo;
+        document.getElementById('ubicacion-perfil').value = p.ubicacion || '';
+      })
+      .catch(function () {
+        window.location.href = 'login.html';
+      });
+
+    document.getElementById('form-datos-perfil').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var msg = document.getElementById('mensaje-perfil');
+      fetch('actualizar_perfil.php', { method: 'POST', body: new FormData(this) })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          msg.style.display = 'block';
+          if (data.ok) {
+            msg.style.background = '#e6f4ea';
+            msg.style.color = '#1e7e34';
+            msg.textContent = 'Perfil actualizado correctamente.';
+            var nombre = document.getElementById('nombre-perfil').value;
+            var apellido = document.getElementById('apellido-perfil').value;
+            document.getElementById('perfil-nombre-completo').textContent = nombre + ' ' + apellido;
+            document.getElementById('perfil-correo').textContent = document.getElementById('correo-perfil').value;
+            document.getElementById('perfil-ubicacion').textContent = document.getElementById('ubicacion-perfil').value || 'Sin especificar';
+            document.getElementById('avatar-iniciales').textContent = iniciales(nombre, apellido);
+          } else {
+            msg.style.background = '#fdecea';
+            msg.style.color = '#c0392b';
+            msg.textContent = data.error;
+          }
+        })
+        .catch(function () {
+          msg.style.display = 'block';
+          msg.style.background = '#fdecea';
+          msg.style.color = '#c0392b';
+          msg.textContent = 'No se pudo conectar con el servidor. Intentá nuevamente.';
+        });
+    });
+  </script>
+
+</body>
+</html>

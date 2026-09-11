@@ -1,0 +1,190 @@
+
+.volver{
+  margin: 20px 20px 0;
+}
+.detalle-torneo{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 20px;
+}
+.portada{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.portada img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.portada .estado{
+  top: 14px;
+  left: 14px;
+}
+.resumen{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.resumen h1{
+  font-size: 22px;
+}
+.descripcion-larga{
+  color: #8B8B96;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 8px 0 0;
+}
+.acciones-detalle{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+  width: 100%;
+}
+.acciones-detalle .btn-registro{
+  display: block;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+.guardar-detalle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #8B5CF6;
+  border-radius: 12px;
+  color: #8B5CF6;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .25s ease;
+}
+.guardar-detalle:hover{
+  background-color: #8B5CF6;
+  color: #FFFFFF;
+}
+
+
+.tab-torneo{
+  margin: 0 20px 20px;
+}
+.tarjeta-formulario + .tarjeta-formulario,
+.tab-torneo + .tarjeta-formulario{
+  margin-top: 20px;
+}
+.seccion-detalle .tarjeta-formulario{
+  margin: 0 20px 20px;
+}
+
+.tabla-posiciones{
+  display: flex;
+  flex-direction: column;
+}
+.fila-posicion{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid #2A2A36;
+  transition: .25s ease;
+}
+.fila-posicion:first-child{
+  border-top: none;
+}
+.fila-posicion:hover{
+  background-color: rgba(139, 92, 246, .08);
+}
+.fila-posicion.encabezado{
+  color: #6B6B78;
+  font-size: 11px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.fila-posicion.encabezado:hover{
+  background-color: transparent;
+}
+.col-pos{
+  width: 22px;
+  color: #8B5CF6;
+  font-weight: 700;
+  font-size: 13px;
+}
+.col-equipo{
+  flex: 1;
+  min-width: 0;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 500;
+}
+.col-dato{
+  width: 30px;
+  text-align: center;
+  color: #B5B5C3;
+  font-size: 13px;
+}
+.fila-posicion.encabezado .col-equipo,
+.fila-posicion.encabezado .col-pos,
+.fila-posicion.encabezado .col-dato{
+  color: #6B6B78;
+  font-weight: 600;
+}
+.fila-posicion.oro,
+.fila-posicion.plata,
+.fila-posicion.bronce{
+  background-color: rgba(139, 92, 246, .08);
+}
+.fila-posicion.oro .col-pos,
+.fila-posicion.plata .col-pos,
+.fila-posicion.bronce .col-pos{
+  color: #8B5CF6;
+}
+.oro{ color: #F5C542; }
+.plata{ color: #C7CBD1; }
+.bronce{ color: #CD7F32; }
+
+
+@media (min-width: 480px){
+  .col-pos{ width: 26px; }
+  .col-dato{ width: 34px; }
+}
+
+@media (min-width: 768px){
+  .volver{ margin: 28px 40px 0; }
+  .detalle-torneo{ margin: 28px 40px; }
+  .resumen h1{ font-size: 28px; }
+  .tab-torneo{ margin: 0 40px 24px; }
+  .seccion-detalle .tarjeta-formulario{ margin: 0 40px 24px; }
+}
+
+@media (min-width: 1024px){
+  .detalle-torneo{
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .portada{ width: 44%; height: auto; min-height: 280px; }
+  .resumen{ flex: 1; justify-content: center; }
+  .resumen h1{ font-size: 32px; }
+  .acciones-detalle{ flex-direction: row; }
+  .acciones-detalle .btn-registro,
+  .guardar-detalle{ flex: 1; }
+
+    .volver{ margin-left: 80px; margin-right: 80px; }
+  .detalle-torneo{ margin-left: 80px; margin-right: 80px; }
+  .tab-torneo{ margin-left: 80px; margin-right: 80px; }
+  .seccion-detalle .tarjeta-formulario{ margin-left: 80px; margin-right: 80px; }
+}
+@media (min-width: 1280px){
+  .volver{ margin-left: 120px; margin-right: 120px; }
+  .detalle-torneo{ margin-left: 120px; margin-right: 120px; }
+  .tab-torneo{ margin-left: 120px; margin-right: 120px; }
+  .seccion-detalle .tarjeta-formulario{ margin-left: 120px; margin-right: 120px; }
+}

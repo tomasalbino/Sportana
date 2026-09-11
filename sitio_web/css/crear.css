@@ -1,0 +1,197 @@
+
+
+.form-torneo{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px 20px;
+}
+
+.pasos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 0 8px;
+}
+.paso{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6B6B78;
+  font-size: 12px;
+  font-weight: 500;
+  transition: .25s ease;
+}
+.paso span:last-child{
+  display: none;
+}
+.paso .numero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  border: 1px solid #2A2A36;
+  background-color: #181821;
+  color: #6B6B78;
+  font-size: 13px;
+  font-weight: 700;
+  transition: .25s ease;
+}
+.paso.activo{
+  color: #FFFFFF;
+}
+.paso.activo .numero{
+  background-color: #8B5CF6;
+  border-color: #8B5CF6;
+  color: #FFFFFF;
+}
+.paso.hecho .numero{
+  background-color: rgba(139, 92, 246, .15);
+  border-color: #8B5CF6;
+  color: #8B5CF6;
+}
+.linea-paso{
+  width: 24px;
+  height: 1px;
+  background-color: #2A2A36;
+}
+
+.formato-grupo{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.formato-opcion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #2A2A36;
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: .25s ease;
+}
+.formato-opcion i{
+  color: #6B6B78;
+  font-size: 22px;
+  transition: .25s ease;
+}
+.formato-opcion p{
+  color: #B5B5C3;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 10px 0 4px;
+  transition: .25s ease;
+}
+.formato-opcion span{
+  color: #8B8B96;
+  font-size: 11px;
+}
+.formato-opcion:hover{
+  border-color: #8B5CF6;
+}
+.formato-opcion.activo{
+  border-color: #8B5CF6;
+  background-color: rgba(139, 92, 246, .08);
+}
+.formato-opcion.activo i,
+.formato-opcion.activo p{
+  color: #8B5CF6;
+}
+.tipo-participante{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.tipo-participante .tab{
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+
+.switch-fila{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid #2A2A36;
+}
+.switch-texto p{
+  margin: 0;
+}
+.switch-texto p:first-child{
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 500;
+}
+.switch-texto p:last-child{
+  color: #8B8B96;
+  font-size: 11px;
+  margin-top: 3px;
+}
+.switch{
+  display: inline-block;
+  width: 38px;
+  height: 20px;
+  min-width: 38px;
+  border-radius: 20px;
+  background-color: #2A2A36;
+  position: relative;
+  cursor: pointer;
+  transition: .25s ease;
+}
+.switch-bola{
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #B5B5C3;
+  border-radius: 50%;
+  transition: .25s ease;
+}
+.switch.activo{
+  background-color: #8B5CF6;
+}
+.switch.activo .switch-bola{
+  left: 20px;
+  background-color: #FFFFFF;
+}
+.form-torneo .tarjeta{
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+
+@media (min-width: 768px){
+  .pasos{ gap: 14px; margin-bottom: 8px; }
+  .paso{ font-size: 13px; }
+  .paso span:last-child{ display: inline; }
+  .linea-paso{ width: 40px; }
+  .formato-grupo{ flex-direction: row; }
+  .formato-opcion{ flex: 1; }
+}
+
+
+@media (min-width: 1024px){
+  .form-torneo{ max-width: 760px; margin: 0 auto; padding-bottom: 30px; }
+  .form-torneo .tarjeta{ margin: 0; }
+}
+
+@media (min-width: 768px){
+  .form-torneo{ padding-left: 40px; padding-right: 40px; }
+}
+@media (min-width: 1024px){
+  .form-torneo{ padding-left: 80px; padding-right: 80px; }
+}
+@media (min-width: 1280px){
+  .form-torneo{ padding-left: 120px; padding-right: 120px; }
+}

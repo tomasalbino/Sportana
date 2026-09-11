@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportana | Crear torneo · Paso 3 de 3</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/crear.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="index.html" class="logo">
+        <img src="imgs/logo.png" alt="Sportana" class="logo-img">
+        <span>Sportana</span>
+      </a>
+
+        <ul class="apart">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="deportes.html">Deportes</a></li>
+        </ul>
+
+        <div class="auth-buttons">
+          <a href="perfil.html" class="btn-login"><i class="fa-solid fa-circle-user"></i> Mi perfil</a>
+          <a href="login.html" class="btn-login">Iniciar sesión</a>
+          <a href="registro.html" class="btn-registro">Registrarse</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="encabezado-pagina">
+    <div class="titulo">
+      <h1>Crear torneo</h1>
+      <p>Configurá los datos de tu nueva competencia</p>
+    </div>
+  </section>
+
+  <form class="form-torneo" id="form-crear-torneo">
+
+    <div class="pasos">
+      <div class="paso hecho">
+        <span class="numero"><i class="fa-solid fa-check"></i></span>
+        <span>Datos y módulo</span>
+      </div>
+      <span class="linea-paso"></span>
+      <div class="paso hecho">
+        <span class="numero"><i class="fa-solid fa-check"></i></span>
+        <span>Detalles y premios</span>
+      </div>
+      <span class="linea-paso"></span>
+      <div class="paso activo">
+        <span class="numero">3</span>
+        <span>Participantes</span>
+      </div>
+    </div>
+
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-formulario">Participantes</h2>
+
+      <div class="tipo-participante">
+        <button type="button" class="tab activo">Equipos</button>
+        <button type="button" class="tab">Individual</button>
+      </div>
+
+      <div class="fila-campos">
+        <div class="campo">
+          <label for="cupo-min">Cupo mínimo</label>
+          <input type="number" id="cupo-min" name="cupo-min" class="input-campo" placeholder="4">
+        </div>
+        <div class="campo">
+          <label for="cupo-max">Cupo máximo</label>
+          <input type="number" id="cupo-max" name="cupo-max" class="input-campo" placeholder="16">
+        </div>
+      </div>
+
+      <div class="switch-fila">
+        <div class="switch-texto">
+          <p>Torneo público</p>
+          <p>Visible para usuarios no autenticados</p>
+        </div>
+        <input type="checkbox" name="es_publico" id="check-es-publico" checked hidden>
+        <span class="switch activo" onclick="var c=document.getElementById('check-es-publico'); c.checked=!c.checked; this.classList.toggle('activo');"><span class="switch-bola"></span></span>
+      </div>
+
+      <div class="switch-fila">
+        <div class="switch-texto">
+          <p>Requiere aprobación de inscripción</p>
+          <p>El organizador valida cada alta</p>
+        </div>
+        <input type="checkbox" name="requiere_aprobacion" id="check-requiere-aprobacion" hidden>
+        <span class="switch" onclick="var c=document.getElementById('check-requiere-aprobacion'); c.checked=!c.checked; this.classList.toggle('activo');"><span class="switch-bola"></span></span>
+      </div>
+
+      <div class="switch-fila">
+        <div class="switch-texto">
+          <p>Inscripciones abiertas</p>
+          <p>Los participantes pueden inscribirse actualmente</p>
+        </div>
+        <input type="checkbox" name="inscripciones_abiertas" id="check-inscripciones-abiertas" checked hidden>
+        <span class="switch activo" onclick="var c=document.getElementById('check-inscripciones-abiertas'); c.checked=!c.checked; this.classList.toggle('activo');"><span class="switch-bola"></span></span>
+      </div>
+    </div>
+
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-formulario">Vista previa</h2>
+      <p class="subtitulo-formulario">Así se vería tu torneo en el listado público. La imagen se asigna automáticamente según el deporte elegido.</p>
+      <article class="tarjeta">
+        <div class="imagen">
+          <img src="imgs/basquete.jpg" alt="Vista previa: Liga Metropolitana 2026">
+          <span class="estado">Inscripciones abiertas</span>
+          <button class="guardar" type="button">
+            <i class="fa-regular fa-bookmark"></i>
+          </button>
+        </div>
+        <div class="cuerpo">
+          <h3>Liga Metropolitana 2026</h3>
+          <div class="torneo-meta">
+            <span class="categoria"><i class="fa-solid fa-basketball"></i> Básquetbol</span>
+            <span class="formato"><i class="fa-solid fa-layer-group"></i> Liga</span>
+            <span class="ubicacion"><i class="fa-solid fa-location-dot"></i> Montevideo</span>
+          </div>
+          <p class="dato"><i class="fa-regular fa-calendar"></i> 05/10/2026 - 25/10/2026</p>
+          <p class="dato"><i class="fa-solid fa-users"></i> 12/16 equipos inscritos</p>
+          <p class="dato"><i class="fa-solid fa-user-tie"></i> Organizado por Club Nacional</p>
+          <p class="descripcion"><i class="fa-regular fa-lightbulb"></i> Torneo de baloncesto con fase de grupos y eliminatorias, siguiendo las reglas oficiales de la FIBA.</p>
+          <span class="boton-detalles">Ver detalles</span>
+        </div>
+      </article>
+    </div>
+
+    <div id="mensaje-crear-torneo" style="display:none; padding:10px 14px; border-radius:6px; margin-bottom:14px; font-size:14px;"></div>
+
+    <div class="acciones-formulario">
+      <a href="crear2.html" class="btn-login">Volver</a>
+      <button type="submit" class="btn-registro">Crear torneo</button>
+    </div>
+
+  </form>
+  <script>
+    var IMAGEN_POR_DEPORTE = {
+      'Fútbol': 'fubol.jpg', 'Básquetbol': 'basquete.jpg', 'Ajedrez': 'ajedrez.jpg',
+      'Tenis': 'tenis.jpg', 'Voleibol': 'voley.jpg', 'Boxeo': 'boxeo.jpg',
+      'Lucha': 'lucha.jpg', 'Karate': 'karate.jpg', 'Tenis de mesa': 'tenis-mesa.jpg',
+      'Natación': 'natacion.jpg', 'Tiro con arco': 'arco.jpg', 'Counter-Strike 2': 'counter.jpg',
+      'MMA': 'mma.jpg', 'Valorant': 'valorant.jpg', 'Pádel': 'padel.jpg', 'Billar': 'billar.jpg'
+    };
+    var ICONO_POR_DEPORTE = {
+      'Fútbol': 'fa-futbol', 'Básquetbol': 'fa-basketball', 'Ajedrez': 'fa-chess',
+      'Tenis': 'fa-table-tennis-paddle-ball', 'Voleibol': 'fa-volleyball', 'Boxeo': 'fa-hand-fist',
+      'Lucha': 'fa-user-ninja', 'Karate': 'fa-hand-fist', 'Tenis de mesa': 'fa-table-tennis-paddle-ball',
+      'Natación': 'fa-person-swimming', 'Tiro con arco': 'fa-bullseye', 'Counter-Strike 2': 'fa-crosshairs',
+      'MMA': 'fa-hand-fist', 'Valorant': 'fa-crosshairs', 'Pádel': 'fa-table-tennis-paddle-ball', 'Billar': 'fa-circle'
+    };
+    var FORMATO_INFO = {
+      liga: { etiqueta: 'Liga', icono: 'fa-layer-group' },
+      eliminacion: { etiqueta: 'Eliminación directa', icono: 'fa-sitemap' },
+      suizo: { etiqueta: 'Sistema suizo', icono: 'fa-shuffle' }
+    };
+
+    (function actualizarVistaPrevia() {
+      var datos = JSON.parse(sessionStorage.getItem('sportana_crear_paso1') || '{}');
+      var tarjeta = document.querySelector('.tarjeta-formulario .tarjeta');
+      if (!tarjeta || !datos.nombre) return;
+
+      var deporte = datos.deporte || 'Fútbol';
+      var imagen = IMAGEN_POR_DEPORTE[deporte] || 'fubol.jpg';
+      var iconoDeporte = ICONO_POR_DEPORTE[deporte] || 'fa-futbol';
+      var formato = FORMATO_INFO[datos.formato] || FORMATO_INFO.liga;
+
+      var img = tarjeta.querySelector('.imagen img');
+      img.src = 'imgs/' + imagen;
+      img.alt = 'Vista previa: ' + datos.nombre;
+
+      tarjeta.querySelector('.cuerpo h3').textContent = datos.nombre;
+
+      var catSpan = tarjeta.querySelector('.categoria');
+      catSpan.innerHTML = '<i class="fa-solid ' + iconoDeporte + '"></i> ' + deporte;
+
+      var formatoSpan = tarjeta.querySelector('.formato');
+      formatoSpan.innerHTML = '<i class="fa-solid ' + formato.icono + '"></i> ' + formato.etiqueta;
+
+      var ubicacionSpan = tarjeta.querySelector('.ubicacion');
+      ubicacionSpan.innerHTML = '<i class="fa-solid fa-location-dot"></i> ' + (datos.ubicacion || 'A confirmar');
+
+      var datosPs = tarjeta.querySelectorAll('.cuerpo .dato');
+      if (datos['fecha-inicio'] && datos['fecha-fin']) {
+        datosPs[0].innerHTML = '<i class="fa-regular fa-calendar"></i> ' + datos['fecha-inicio'] + ' - ' + datos['fecha-fin'];
+      }
+      datosPs[1].innerHTML = '<i class="fa-solid fa-users"></i> 0 equipos inscritos';
+
+      var descripcionP = tarjeta.querySelector('.descripcion');
+      if (datos.descripcion) {
+        descripcionP.innerHTML = '<i class="fa-regular fa-lightbulb"></i> ' + datos.descripcion;
+      } else {
+        descripcionP.style.display = 'none';
+      }
+    })();
+
+    document.getElementById('form-crear-torneo').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var form = this;
+      var previo = JSON.parse(sessionStorage.getItem('sportana_crear_paso1') || '{}');
+      var datos = Object.assign({}, previo, {
+        'cupo-min': form['cupo-min'].value,
+        'cupo-max': form['cupo-max'].value,
+        es_publico: document.getElementById('check-es-publico').checked ? '1' : '0',
+        requiere_aprobacion: document.getElementById('check-requiere-aprobacion').checked ? '1' : '0',
+        inscripciones_abiertas: document.getElementById('check-inscripciones-abiertas').checked ? '1' : '0',
+      });
+      var fd = new FormData();
+      Object.keys(datos).forEach(function (k) { fd.append(k, datos[k]); });
+
+      var msg = document.getElementById('mensaje-crear-torneo');
+      fetch('procesar_crear_torneo.php', { method: 'POST', body: fd })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          msg.style.display = 'block';
+          if (data.ok) {
+            msg.style.background = '#e6f4ea';
+            msg.style.color = '#1e7e34';
+            msg.textContent = 'Torneo "' + datos.nombre + '" creado correctamente (id ' + data.id_torneo + ').';
+            sessionStorage.removeItem('sportana_crear_paso1');
+          } else {
+            msg.style.background = '#fdecea';
+            msg.style.color = '#c0392b';
+            msg.textContent = data.error;
+          }
+        })
+        .catch(function () {
+          msg.style.display = 'block';
+          msg.style.background = '#fdecea';
+          msg.style.color = '#c0392b';
+          msg.textContent = 'No se pudo conectar con el servidor. Intentá nuevamente.';
+        });
+    });
+  </script>
+
+  <footer id="contacto">
+    <div class="footer-contenedor">
+
+      <div class="footer-logo">
+        <img src="imgs/logo.png" alt="Sportana">
+        <h2>Sportana</h2>
+        <p>Organiza y administra torneos deportivos de forma simple y profesional.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Sportana</h3>
+        <a href="index.html">Inicio</a>
+        <a href="torneos.html">Explorar torneos</a>
+        <a href="crear.html">Crear torneo</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Recursos</h3>
+        <a href="torneos.html">Torneos</a>
+        <a href="deportes.html">Deportes</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Contacto</h3>
+        <a href="#">Instagram</a>
+        <a href="#">GitHub</a>
+        <a href="mailto:contacto@sportana.uy">Correo</a>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copy">© 2026 Sportana. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="creditos-empresa">
+    <p>Sitio web desarrollado por</p>
+    <img src="imgs/zenko-logo.png" alt="Zenko" class="logo-zenko">
+  </div>
+
+</body>
+</html>

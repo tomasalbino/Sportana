@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportana | Explorar torneos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/torneos.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="index.html" class="logo">
+        <img src="imgs/logo.png" alt="Sportana" class="logo-img">
+        <span>Sportana</span>
+      </a>
+
+        <ul class="apart">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="torneos.html" class="activo">Torneos</a></li>
+          <li><a href="deportes.html">Deportes</a></li>
+       
+        </ul>
+
+        <div class="auth-buttons">
+          <a href="perfil.html" class="btn-login"><i class="fa-solid fa-circle-user"></i> Mi perfil</a>
+          <a href="login.html" class="btn-login">Iniciar sesión</a>
+          <a href="registro.html" class="btn-registro">Registrarse</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="encabezado-pagina">
+    <div class="titulo">
+      <h1>Explorar torneos</h1>
+      <p>Descubrí y unite a los mejores torneos deportivos</p>
+    </div>
+
+    <div class="buscador">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Buscar torneos...">
+    </div>
+  </section>
+
+  <section class="contenedor">
+  <div class="filtro-tarjeta">
+    <div class="filtro-grupo">
+      <label for="filtro-deporte">Deporte</label>
+      <div class="filtro-select">
+        <i class="fa-solid fa-futbol icono-izq"></i>
+        <select id="filtro-deporte">
+          <option>Todos los deportes</option>
+          <option>Fútbol</option>
+          <option>Básquetbol</option>
+          <option>Ajedrez</option>
+          <option>Tenis</option>
+          <option>Voleibol</option>
+          <option>Boxeo</option>
+          <option>Lucha</option>
+          <option>Karate</option>
+          <option>Tenis de mesa</option>
+          <option>Natación</option>
+          <option>Tiro con arco</option>
+          <option>Counter-Strike 2</option>
+          <option>MMA</option>
+          <option>Valorant</option>
+          <option>Pádel</option>
+          <option>Billar</option>
+        </select>
+        <i class="fa-solid fa-chevron-down flecha"></i>
+      </div>
+    </div>
+
+    <div class="filtro-grupo">
+      <label for="filtro-modulo">Módulo de competencia</label>
+      <div class="filtro-select">
+        <i class="fa-solid fa-layer-group icono-izq"></i>
+        <select id="filtro-modulo">
+          <option>Todos los módulos</option>
+          <option>Liga</option>
+          <option>Eliminación directa</option>
+          <option>Sistema suizo</option>
+        </select>
+        <i class="fa-solid fa-chevron-down flecha"></i>
+      </div>
+    </div>
+
+    <div class="filtro-grupo">
+      <label for="filtro-fecha">Fecha</label>
+      <div class="filtro-select">
+        <i class="fa-regular fa-calendar icono-izq"></i>
+        <select id="filtro-fecha">
+          <option>Cualquier fecha</option>
+          <option>Esta semana</option>
+          <option>Este mes</option>
+        </select>
+        <i class="fa-solid fa-chevron-down flecha"></i>
+      </div>
+    </div>
+
+    <button class="btn-filtro" type="button">
+      <i class="fa-solid fa-sliders"></i> Filtrar
+    </button>
+  </div>
+  </section>
+
+  <section class="seccion-listado">
+    <div class="tab-torneo">
+      <div class="tab-grupo">
+        <button class="tab activo" type="button">
+          <i class="fa-regular fa-rectangle-list"></i> Todos los torneos <span class="tab-cont">24</span>
+        </button>
+        <button class="tab" type="button">
+          <i class="fa-regular fa-bookmark"></i> Inscripciones abiertas <span class="tab-cont">12</span>
+        </button>
+        <button class="tab" type="button">
+          <i class="fa-regular fa-clock"></i> Próximos <span class="tab-cont">8</span>
+        </button>
+        <button class="tab" type="button">
+          <i class="fa-regular fa-star"></i> Destacados <span class="tab-cont">6</span>
+        </button>
+      </div>
+
+      <div class="orden-select">
+        <select>
+          <option>Más recientes</option>
+          <option>Fecha de inicio</option>
+        </select>
+        <i class="fa-solid fa-chevron-down flecha"></i>
+      </div>
+    </div>
+
+    <p class="contador-torneos">Mostrando 6 de 24 torneos</p>
+
+    <div class="grid-torneos">
+      <article class="tarjeta">
+        <div class="imagen">
+          <img src="imgs/basquete.jpg" alt="Liga Metropolitana 2026 de básquetbol">
+          <span class="estado">Inscripciones abiertas</span>
+          <button class="guardar" type="button">
+            <i class="fa-regular fa-bookmark"></i>
+          </button>
+        </div>
+        <div class="cuerpo">
+          <h3>Liga Metropolitana 2026</h3>
+          <div class="torneo-meta">
+            <span class="categoria"><i class="fa-solid fa-basketball"></i> Básquetbol</span>
+            <span class="formato"><i class="fa-solid fa-layer-group"></i> Liga</span>
+            <span class="ubicacion"><i class="fa-solid fa-location-dot"></i> Montevideo</span>
+          </div>
+          <p class="dato"><i class="fa-regular fa-calendar"></i> 05/10/2026 - 25/10/2026</p>
+          <p class="dato"><i class="fa-solid fa-users"></i> 12/16 equipos inscritos</p>
+          <p class="dato"><i class="fa-solid fa-user-tie"></i> Organizado por Club Nacional</p>
+          <p class="descripcion"><i class="fa-regular fa-lightbulb"></i> Torneo de baloncesto con fase de grupos y eliminatorias, siguiendo las reglas oficiales de la FIBA.</p>
+          <a href="detalle.html" class="boton-detalles">Ver detalles</a>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <div class="imagen">
+          <img src="imgs/fubol.jpg" alt="Copa Primavera 2026 de fútbol">
+          <span class="estado">Inscripciones abiertas</span>
+          <button class="guardar" type="button">
+            <i class="fa-regular fa-bookmark"></i>
+          </button>
+        </div>
+        <div class="cuerpo">
+          <h3>Copa Primavera 2026</h3>
+          <div class="torneo-meta">
+            <span class="categoria"><i class="fa-solid fa-futbol"></i> Fútbol</span>
+            <span class="formato"><i class="fa-solid fa-sitemap"></i> Eliminación directa</span>
+            <span class="ubicacion"><i class="fa-solid fa-location-dot"></i> Montevideo</span>
+          </div>
+          <p class="dato"><i class="fa-regular fa-calendar"></i> 15/09/2026 - 30/09/2026</p>
+          <p class="dato"><i class="fa-solid fa-users"></i> 14/16 equipos inscritos</p>
+          <p class="dato"><i class="fa-solid fa-user-tie"></i> Organizado por Liga Metropolitana</p>
+          <p class="descripcion"><i class="fa-regular fa-lightbulb"></i> Torneo anual de fútbol para equipos de toda la región.</p>
+          <a href="detalle.html" class="boton-detalles">Ver detalles</a>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <div class="imagen">
+          <img src="imgs/lucha.jpg" alt="Open Nacional de Lucha 2026">
+          <span class="estado">Inscripciones abiertas</span>
+          <button class="guardar" type="button">
+            <i class="fa-regular fa-bookmark"></i>
+          </button>
+        </div>
+        <div class="cuerpo">
+          <h3>Open Nacional de Lucha 2026</h3>
+          <div class="torneo-meta">
+            <span class="categoria"><i class="fa-solid fa-hand-fist"></i> Lucha</span>
+            <span class="formato"><i class="fa-solid fa-sitemap"></i> Eliminación directa</span>
+            <span class="ubicacion"><i class="fa-solid fa-location-dot"></i> Montevideo</span>
+          </div>
+          <p class="dato"><i class="fa-regular fa-calendar"></i> 10/08/2026 - 12/08/2026</p>
+          <p class="dato"><i class="fa-solid fa-users"></i> 28/32 competidores inscritos</p>
+          <p class="dato"><i class="fa-solid fa-user-tie"></i> Organizado por Federación de Lucha</p>
+          <p class="descripcion"><i class="fa-regular fa-lightbulb"></i> Competencia individual por eliminación directa, respetando las categorías de peso y el reglamento oficial.</p>
+          <a href="detalle.html" class="boton-detalles">Ver detalles</a>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <div class="imagen">
+          <img src="imgs/arco.jpg" alt="Desafío del Arquero 2026">
+          <span class="estado">Inscripciones abiertas</span>
+          <button class="guardar" type="button">
+            <i class="fa-regular fa-bookmark"></i>
+          </button>
+        </div>
+        <div class="cuerpo">
+          <h3>Desafío del Arquero 2026</h3>
+          <div class="torneo-meta">
+            <span class="categoria"><i class="fa-solid fa-bullseye"></i> Tiro con arco</span>
+            <span class="formato"><i class="fa-solid fa-layer-group"></i> Liga</span>
+            <span class="ubicacion"><i class="fa-solid fa-location-dot"></i> Canelones</span>
+          </div>
+          <p class="dato"><i class="fa-regular fa-calendar"></i> 18/11/2026 - 19/11/2026</p>
+          <p class="dato"><i class="fa-solid fa-users"></i> 35/40 participantes inscritos</p>
+          <p class="dato"><i class="fa-solid fa-user-tie"></i> Organizado por Club de Tiro Canelones</p>
+          <p class="descripcion"><i class="fa-regular fa-lightbulb"></i> Competencia de precisión donde cada arquero suma puntos según la zona del blanco alcanzada en cada ronda.</p>
+          <a href="detalle.html" class="boton-detalles">Ver detalles</a>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <div class="imagen">
+          <img src="imgs/ajedrez.jpg" alt="Gran Maestro Open 2026 de ajedrez">
+          <span class="estado">Inscripciones abiertas</span>
+          <button class="guardar" type="button">
+            <i class="fa-regular fa-bookmark"></i>
+          </button>
+        </div>
+        <div class="cuerpo">
+          <h3>Gran Maestro Open 2026</h3>
+          <div class="torneo-meta">
+            <span class="categoria"><i class="fa-solid fa-chess"></i> Ajedrez</span>
+            <span class="formato"><i class="fa-solid fa-shuffle"></i> Sistema suizo</span>
+            <span class="ubicacion"><i class="fa-solid fa-location-dot"></i> Punta del Este</span>
+          </div>
+          <p class="dato"><i class="fa-regular fa-calendar"></i> 02/12/2026 - 06/12/2026</p>
+          <p class="dato"><i class="fa-solid fa-users"></i> 58/64 jugadores inscritos</p>
+          <p class="dato"><i class="fa-solid fa-user-tie"></i> Organizado por Federación Uruguaya de Ajedrez</p>
+          <p class="descripcion"><i class="fa-regular fa-lightbulb"></i> Torneo individual bajo el sistema suizo, con partidas reglamentadas y control oficial del tiempo.</p>
+          <a href="detalle.html" class="boton-detalles">Ver detalles</a>
+        </div>
+      </article>
+
+      <article class="tarjeta">
+        <div class="imagen">
+          <img src="imgs/counter.jpg" alt="Sportana CS2 Cup 2026 de Counter-Strike 2">
+          <span class="estado">Inscripciones abiertas</span>
+          <button class="guardar" type="button">
+            <i class="fa-regular fa-bookmark"></i>
+          </button>
+        </div>
+        <div class="cuerpo">
+          <h3>Sportana CS2 Cup 2026</h3>
+          <div class="torneo-meta">
+            <span class="categoria"><i class="fa-solid fa-computer"></i> Counter-Strike 2</span>
+            <span class="formato"><i class="fa-solid fa-sitemap"></i> Eliminación directa</span>
+            <span class="ubicacion"><i class="fa-solid fa-location-dot"></i> Online</span>
+          </div>
+          <p class="dato"><i class="fa-regular fa-calendar"></i> 20/07/2026 - 22/07/2026</p>
+          <p class="dato"><i class="fa-solid fa-users"></i> 10/16 equipos inscritos</p>
+          <p class="dato"><i class="fa-solid fa-user-tie"></i> Organizado por Sportana eSports</p>
+          <p class="descripcion"><i class="fa-regular fa-lightbulb"></i> Torneo 5 contra 5 con eliminación directa, disputado bajo el reglamento competitivo oficial de Counter-Strike 2.</p>
+          <a href="detalle.html" class="boton-detalles">Ver detalles</a>
+        </div>
+      </article>
+    </div>
+
+    <nav class="paginacion">
+      <button class="pagina-flecha" type="button"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="pagina-num activo" type="button">1</button>
+      <button class="pagina-num" type="button">2</button>
+      <button class="pagina-num" type="button">3</button>
+      <span class="puntos">…</span>
+      <button class="pagina-num" type="button">6</button>
+      <button class="pagina-flecha" type="button"><i class="fa-solid fa-chevron-right"></i></button>
+    </nav>
+  </section>
+
+  <footer id="contacto">
+    <div class="footer-contenedor">
+
+      <div class="footer-logo">
+        <img src="imgs/logo.png" alt="Sportana">
+        <h2>Sportana</h2>
+        <p>Organiza y administra torneos deportivos de forma simple y profesional.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Sportana</h3>
+        <a href="index.html">Inicio</a>
+        <a href="torneos.html">Explorar torneos</a>
+        <a href="crear.html">Crear torneo</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Recursos</h3>
+        <a href="torneos.html">Torneos</a>
+        <a href="deportes.html">Deportes</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Contacto</h3>
+        <a href="#">Instagram</a>
+        <a href="#">GitHub</a>
+        <a href="mailto:contacto@sportana.uy">Correo</a>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copy">© 2026 Sportana. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="creditos-empresa">
+    <p>Sitio web desarrollado por</p>
+    <img src="imgs/zenko-logo.png" alt="Zenko" class="logo-zenko">
+  </div>
+
+</body>
+</html>

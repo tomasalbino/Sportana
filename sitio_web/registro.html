@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportana | Crear cuenta</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="index.html" class="logo">
+        <img src="imgs/logo.png" alt="Sportana" class="logo-img">
+        <span>Sportana</span>
+      </a>
+
+        <ul class="apart">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="torneos.html">Torneos</a></li>
+          <li><a href="deportes.html">Deportes</a></li>
+     
+        </ul>
+
+        <div class="auth-buttons">
+          <a href="login.html" class="btn-login">Iniciar sesión</a>
+          <a href="registro.html" class="btn-registro">Registrarse</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="auth-seccion">
+    <div class="auth">
+      <div class="auth-intro">
+        <h1>Bienvenido de nuevo a <span class="nombre">Sportana</span></h1>
+        <p>Iniciá sesión para seguir gestionando tus torneos y llevar tu pasión por el deporte al siguiente nivel.</p>
+      </div>
+
+      <div class="auth-panel">
+        <div class="auth-panel-header">
+          <i class="fa-regular fa-user"></i>
+          <h2>Crear cuenta</h2>
+          <p>Completá tus datos para comenzar</p>
+        </div>
+
+        <form class="auth-form" action="procesar_registro.php" method="post" id="form-registro">
+          <div id="mensaje-registro" style="display:none; padding:10px 14px; border-radius:6px; margin-bottom:14px; font-size:14px;"></div>
+          <div class="campo-fila">
+            <div class="campo">
+              <label for="nombre-registro">Nombre</label>
+              <div class="campo-icono">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" id="nombre-registro" name="nombre" placeholder="Nombre" autocomplete="given-name" required>
+              </div>
+            </div>
+            <div class="campo">
+              <label for="apellido-registro">Apellido</label>
+              <div class="campo-icono">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" id="apellido-registro" name="apellido" placeholder="Apellido" autocomplete="family-name" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="correo-registro">Correo electrónico</label>
+            <div class="campo-icono">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="correo-registro" name="correo" placeholder="ejemplo@correo.com" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="usuario-registro">Nombre de usuario</label>
+            <div class="campo-icono">
+              <i class="fa-regular fa-user"></i>
+              <input type="text" id="usuario-registro" name="usuario" placeholder="Nombre de usuario" autocomplete="username" required>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="contra-registro">Contraseña</label>
+            <div class="campo-icono">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="contra-registro" name="contrasena" placeholder="********" autocomplete="new-password" required>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="confirmar-contra-registro">Confirmar contraseña</label>
+            <div class="campo-icono">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="confirmar-contra-registro" name="confirmar_contrasena" placeholder="********" autocomplete="new-password" required>
+            </div>
+          </div>
+
+          <button class="btn-registro btn-full" type="submit">Crear cuenta</button>
+
+          <p class="auth-alt">¿Ya tenés una cuenta? <a href="login.html" class="link-primario">Iniciá sesión aquí</a></p>
+          <p class="auth-alt">¿Sos una federación? <a href="registro-federacion.html" class="link-primario">Registrate acá</a></p>
+        </form>
+        <script>
+          document.getElementById('form-registro').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var msg = document.getElementById('mensaje-registro');
+            fetch('procesar_registro.php', { method: 'POST', body: new FormData(this) })
+              .then(function (r) { return r.json(); })
+              .then(function (data) {
+                msg.style.display = 'block';
+                if (data.ok) {
+                  msg.style.background = '#e6f4ea';
+                  msg.style.color = '#1e7e34';
+                  msg.textContent = 'Cuenta creada correctamente. Ya podés iniciar sesión.';
+                } else {
+                  msg.style.background = '#fdecea';
+                  msg.style.color = '#c0392b';
+                  msg.textContent = data.error;
+                }
+              })
+              .catch(function () {
+                msg.style.display = 'block';
+                msg.style.background = '#fdecea';
+                msg.style.color = '#c0392b';
+                msg.textContent = 'No se pudo conectar con el servidor. Intentá nuevamente.';
+              });
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <div class="footer-contenedor">
+
+      <div class="footer-logo">
+        <img src="imgs/logo.png" alt="Sportana">
+        <h2>Sportana</h2>
+        <p>Organiza y administra torneos deportivos de forma simple y profesional.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Sportana</h3>
+        <a href="index.html">Inicio</a>
+        <a href="torneos.html">Explorar torneos</a>
+        <a href="crear.html">Crear torneo</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Recursos</h3>
+        <a href="torneos.html">Torneos</a>
+        <a href="deportes.html">Deportes</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Contacto</h3>
+        <a href="#">Instagram</a>
+        <a href="#">GitHub</a>
+        <a href="mailto:contacto@sportana.uy">Correo</a>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copy">© 2026 Sportana. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="creditos-empresa">
+    <p>Sitio web desarrollado por</p>
+    <img src="imgs/zenko-logo.png" alt="Zenko" class="logo-zenko">
+  </div>
+
+</body>
+</html>

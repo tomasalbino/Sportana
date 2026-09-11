@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportana | Liga Metropolitana 2026</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/detalle.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-contenido">
+      <a href="index.html" class="logo">
+        <img src="imgs/logo.png" alt="Sportana" class="logo-img">
+        <span>Sportana</span>
+      </a>
+
+        <ul class="apart">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="torneos.html" class="activo">Torneos</a></li>
+          <li><a href="deportes.html">Deportes</a></li>
+   
+        </ul>
+
+        <div class="auth-buttons">
+          <a href="perfil.html" class="btn-login"><i class="fa-solid fa-circle-user"></i> Mi perfil</a>
+          <a href="login.html" class="btn-login">Iniciar sesión</a>
+          <a href="registro.html" class="btn-registro">Registrarse</a>
+        </div>
+    </div>
+  </header>
+
+  <section class="volver">
+    <a href="torneos.html" class="btn-volver"><i class="fa-solid fa-arrow-left"></i> Volver a torneos</a>
+  </section>
+
+  <section class="detalle-torneo">
+    <div class="portada">
+      <img src="imgs/basquete.jpg" alt="Liga Metropolitana 2026">
+      <span class="estado" id="dt-estado">Inscripciones abiertas</span>
+    </div>
+    <div class="resumen">
+      <h1 id="dt-nombre">Liga Metropolitana 2026</h1>
+      <div class="torneo-meta">
+        <span class="categoria"><i class="fa-solid fa-basketball"></i> <span id="dt-deporte">Básquetbol</span></span>
+        <span class="formato"><i class="fa-solid fa-layer-group"></i> <span id="dt-formato">Liga</span></span>
+        <span class="ubicacion"><i class="fa-solid fa-location-dot"></i> <span id="dt-ubicacion">Montevideo</span></span>
+      </div>
+      <p class="dato"><i class="fa-regular fa-calendar"></i> <span id="dt-fechas">05/10/2026 - 25/10/2026</span></p>
+      <p class="dato"><i class="fa-solid fa-users"></i> <span id="dt-inscritos">12 inscriptos</span></p>
+      <p class="dato"><i class="fa-solid fa-user-tie"></i> Organizado por <span id="dt-organizador">Club Nacional</span></p>
+      <p class="dato" id="dt-cupo-fila"><i class="fa-solid fa-circle-check"></i> <span id="dt-cupo">Quedan 4 cupos disponibles</span></p>
+      <p class="descripcion-larga" id="dt-descripcion">Torneo de baloncesto con fase de grupos y eliminatorias, siguiendo las reglas oficiales de la FIBA. Los equipos jugarán todos contra todos en la fase de liga, clasificando los mejores puestos a la instancia final.</p>
+      <div id="dt-mensaje" style="display:none; padding:10px 14px; border-radius:6px; margin-bottom:14px; font-size:14px;"></div>
+      <div class="acciones-detalle">
+        <button class="btn-registro" type="button" id="btn-inscribirme">Inscribir participante</button>
+        <button class="guardar-detalle" type="button"><i class="fa-regular fa-bookmark"></i> Guardar torneo</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab-torneo">
+    <div class="tab-grupo">
+      <button class="tab activo" type="button"><i class="fa-solid fa-ranking-star"></i> Posiciones</button>
+      <button class="tab" type="button"><i class="fa-regular fa-rectangle-list"></i> Fixture</button>
+      <button class="tab" type="button"><i class="fa-solid fa-people-group"></i> Equipos</button>
+    </div>
+  </section>
+
+  <section class="seccion-detalle">
+
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-formulario">Tabla de posiciones</h2>
+      <div class="tabla-posiciones">
+        <div class="fila-posicion encabezado">
+          <span class="col-pos">#</span>
+          <span class="col-equipo">Equipo</span>
+          <span class="col-dato">PJ</span>
+          <span class="col-dato">PG</span>
+          <span class="col-dato">PP</span>
+          <span class="col-dato">Pts</span>
+        </div>
+        <div class="fila-posicion oro">
+          <span class="col-pos">1</span>
+          <span class="col-equipo">Halcones del Cerro</span><i class="fa-solid fa-medal oro"></i>
+          <span class="col-dato">6</span>
+          <span class="col-dato">5</span>
+          <span class="col-dato">1</span>
+          <span class="col-dato">15</span>
+        </div>
+        <div class="fila-posicion plata">
+          <span class="col-pos">2</span>
+          <span class="col-equipo">Águilas de Pocitos</span><i class="fa-solid fa-medal plata"></i>
+          <span class="col-dato">6</span>
+          <span class="col-dato">4</span>
+          <span class="col-dato">2</span>
+          <span class="col-dato">13</span>
+        </div>
+        <div class="fila-posicion bronce">
+          <span class="col-pos">3</span>
+          <span class="col-equipo">Tigres del Buceo</span><i class="fa-solid fa-medal bronce"></i>
+          <span class="col-dato">6</span>
+          <span class="col-dato">3</span>
+          <span class="col-dato">3</span>
+          <span class="col-dato">11</span>
+        </div>
+        <div class="fila-posicion">
+          <span class="col-pos">4</span>
+          <span class="col-equipo">Lobos de la Aguada</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">2</span>
+          <span class="col-dato">4</span>
+          <span class="col-dato">9</span>
+        </div>
+        <div class="fila-posicion">
+          <span class="col-pos">5</span>
+          <span class="col-equipo">Cóndores de Malvín</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">1</span>
+          <span class="col-dato">5</span>
+          <span class="col-dato">7</span>
+        </div>
+        <div class="fila-posicion">
+          <span class="col-pos">6</span>
+          <span class="col-equipo">Panteras de Carrasco</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">1</span>
+          <span class="col-dato">5</span>
+          <span class="col-dato">6</span>
+        </div>
+        <div class="fila-posicion">
+          <span class="col-pos">7</span>
+          <span class="col-equipo">Toros de Sayago</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">1</span>
+          <span class="col-dato">5</span>
+          <span class="col-dato">5</span>
+        </div>
+        <div class="fila-posicion">
+          <span class="col-pos">8</span>
+          <span class="col-equipo">Leones de Parque Rodó</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">0</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">4</span>
+        </div>
+        <div class="fila-posicion">
+          <span class="col-pos">9</span>
+          <span class="col-equipo">Jaguares de Punta Gorda</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">0</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">3</span>
+        </div>
+        <div class="fila-posicion">
+          <span class="col-pos">10</span>
+          <span class="col-equipo">Osos de La Blanqueada</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">0</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">2</span>
+        </div>
+        <div class="fila-posicion">
+          <span class="col-pos">11</span>
+          <span class="col-equipo">Pumas de Peñarol</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">0</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">1</span>
+        </div>
+        <div class="fila-posicion">
+          <span class="col-pos">12</span>
+          <span class="col-equipo">Linces del Cordón</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">0</span>
+          <span class="col-dato">6</span>
+          <span class="col-dato">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-formulario">Reglamento</h2>
+      <p class="subtitulo-formulario">Reglas particulares de esta competencia</p>
+      <div class="lista-equipos">
+        <div class="fila-equipo">
+          <p>Sistema de liga</p>
+          <span>Todos contra todos</span>
+        </div>
+        <div class="fila-equipo">
+          <p>Puntaje</p>
+          <span>3 por victoria, 1 por empate</span>
+        </div>
+        <div class="fila-equipo">
+          <p>Fair Play</p>
+          <span>Obligatorio</span>
+        </div>
+        <div class="fila-equipo">
+          <p>Reglamento oficial</p>
+          <span>FIBA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-formulario">Premios</h2>
+      <div class="lista-equipos">
+        <div class="fila-equipo">
+          <p>1er puesto</p>
+          <span>Copa + medallas doradas</span>
+        </div>
+        <div class="fila-equipo">
+          <p>2do puesto</p>
+          <span>Medallas plateadas</span>
+        </div>
+        <div class="fila-equipo">
+          <p>3er puesto</p>
+          <span>Medallas de bronce</span>
+        </div>
+        <div class="fila-equipo">
+          <p>MVP del torneo</p>
+          <span>Reconocimiento individual</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-formulario">Fixture</h2>
+      <p class="subtitulo-formulario">Calendario de próximos enfrentamientos y resultados jugados</p>
+
+      <div class="grupo-fixture">
+        <h3 class="subtitulo-fixture">Fecha 7 · Próximos partidos</h3>
+        <div class="lista-partidos">
+          <div class="fila-partido">
+            <span class="equipo-partido">Halcones del Cerro</span>
+            <span class="dato-partido"><i class="fa-regular fa-clock"></i> 24/10 · 19:00</span>
+            <span class="equipo-partido">Cóndores de Malvín</span>
+          </div>
+          <div class="fila-partido">
+            <span class="equipo-partido">Águilas de Pocitos</span>
+            <span class="dato-partido"><i class="fa-regular fa-clock"></i> 24/10 · 20:30</span>
+            <span class="equipo-partido">Panteras de Carrasco</span>
+          </div>
+          <div class="fila-partido">
+            <span class="equipo-partido">Tigres del Buceo</span>
+            <span class="dato-partido"><i class="fa-regular fa-clock"></i> 25/10 · 19:00</span>
+            <span class="equipo-partido">Toros de Sayago</span>
+          </div>
+          <div class="fila-partido">
+            <span class="equipo-partido">Lobos de la Aguada</span>
+            <span class="dato-partido"><i class="fa-regular fa-clock"></i> 25/10 · 20:30</span>
+            <span class="equipo-partido">Leones de Parque Rodó</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grupo-fixture">
+        <h3 class="subtitulo-fixture">Fecha 6 · Resultados</h3>
+        <div class="lista-partidos">
+          <div class="fila-partido">
+            <span class="equipo-partido">Halcones del Cerro</span>
+            <span class="resultado-partido">78 - 65</span>
+            <span class="equipo-partido">Jaguares de Punta Gorda</span>
+          </div>
+          <div class="fila-partido">
+            <span class="equipo-partido">Águilas de Pocitos</span>
+            <span class="resultado-partido">70 - 61</span>
+            <span class="equipo-partido">Osos de La Blanqueada</span>
+          </div>
+          <div class="fila-partido">
+            <span class="equipo-partido">Tigres del Buceo</span>
+            <span class="resultado-partido">64 - 58</span>
+            <span class="equipo-partido">Pumas de Peñarol</span>
+          </div>
+          <div class="fila-partido">
+            <span class="equipo-partido">Cóndores de Malvín</span>
+            <span class="resultado-partido">55 - 60</span>
+            <span class="equipo-partido">Lobos de la Aguada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta-formulario">
+      <h2 class="titulo-formulario">Equipos inscritos</h2>
+      <p class="subtitulo-formulario">12 de 16 cupos ocupados</p>
+      <div class="lista-equipos">
+        <div class="fila-equipo">
+          <span class="avatar-equipo">H</span>
+          <p>Halcones del Cerro</p>
+          <span>Capitán: M. Rodríguez</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">A</span>
+          <p>Águilas de Pocitos</p>
+          <span>Capitán: L. Fernández</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">T</span>
+          <p>Tigres del Buceo</p>
+          <span>Capitán: S. Gómez</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">L</span>
+          <p>Lobos de la Aguada</p>
+          <span>Capitán: N. Silva</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">C</span>
+          <p>Cóndores de Malvín</p>
+          <span>Capitán: J. Pereira</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">P</span>
+          <p>Panteras de Carrasco</p>
+          <span>Capitán: F. Suárez</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">T</span>
+          <p>Toros de Sayago</p>
+          <span>Capitán: D. Martínez</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">L</span>
+          <p>Leones de Parque Rodó</p>
+          <span>Capitán: C. Acosta</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">J</span>
+          <p>Jaguares de Punta Gorda</p>
+          <span>Capitán: R. Bentancor</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">O</span>
+          <p>Osos de La Blanqueada</p>
+          <span>Capitán: A. Correa</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">P</span>
+          <p>Pumas de Peñarol</p>
+          <span>Capitán: G. Olivera</span>
+        </div>
+        <div class="fila-equipo">
+          <span class="avatar-equipo">L</span>
+          <p>Linces del Cordón</p>
+          <span>Capitán: V. Ramos</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer id="contacto">
+    <div class="footer-contenedor">
+
+      <div class="footer-logo">
+        <img src="imgs/logo.png" alt="Sportana">
+        <h2>Sportana</h2>
+        <p>Organiza y administra torneos deportivos de forma simple y profesional.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Sportana</h3>
+        <a href="index.html">Inicio</a>
+        <a href="torneos.html">Explorar torneos</a>
+        <a href="crear.html">Crear torneo</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Recursos</h3>
+        <a href="torneos.html">Torneos</a>
+        <a href="deportes.html">Deportes</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Contacto</h3>
+        <a href="#">Instagram</a>
+        <a href="#">GitHub</a>
+        <a href="mailto:contacto@sportana.uy">Correo</a>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copy">© 2026 Sportana. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="creditos-empresa">
+    <p>Sitio web desarrollado por</p>
+    <img src="imgs/zenko-logo.png" alt="Zenko" class="logo-zenko">
+  </div>
+  <script>
+    var idTorneo = new URLSearchParams(window.location.search).get('id') || '1';
+
+    function formatearFecha(f) {
+      if (!f) return '';
+      var p = f.split('-');
+      return p[2] + '/' + p[1] + '/' + p[0];
+    }
+
+    fetch('obtener_torneo.php?id=' + encodeURIComponent(idTorneo))
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (!data.ok) {
+          document.getElementById('dt-nombre').textContent = 'Torneo no encontrado';
+          document.getElementById('btn-inscribirme').disabled = true;
+          return;
+        }
+        var t = data.torneo;
+        document.title = 'Sportana | ' + t.nombre;
+        document.getElementById('dt-nombre').textContent = t.nombre;
+        document.getElementById('dt-deporte').textContent = t.deporte;
+        document.getElementById('dt-formato').textContent = t.modulo_nombre;
+        document.getElementById('dt-ubicacion').textContent = t.ubicacion || 'A confirmar';
+        document.getElementById('dt-fechas').textContent = formatearFecha(t.fecha_inicio) + ' - ' + formatearFecha(t.fecha_fin);
+        document.getElementById('dt-inscritos').textContent = t.inscritos + ' inscriptos';
+        document.getElementById('dt-organizador').textContent = t.organizador;
+        document.getElementById('dt-descripcion').textContent = t.descripcion || '';
+        document.getElementById('dt-estado').textContent = t.inscripciones_abiertas == 1 ? 'Inscripciones abiertas' : 'Inscripciones cerradas';
+
+        if (t.cupo_maximo) {
+          var quedan = t.cupo_maximo - t.inscritos;
+          document.getElementById('dt-cupo').textContent = quedan > 0 ? ('Quedan ' + quedan + ' cupos disponibles') : 'Cupo completo';
+        } else {
+          document.getElementById('dt-cupo-fila').style.display = 'none';
+        }
+
+        document.getElementById('btn-inscribirme').addEventListener('click', function () {
+          var msg = document.getElementById('dt-mensaje');
+          var correo = window.prompt('Correo del participante a inscribir:');
+          if (!correo) return;
+          fetch('procesar_inscripcion.php', { method: 'POST', body: new URLSearchParams({ id_torneo: idTorneo, correo_participante: correo }) })
+            .then(function (r) { return r.json(); })
+            .then(function (resp) {
+              msg.style.display = 'block';
+              if (resp.ok) {
+                msg.style.background = '#e6f4ea';
+                msg.style.color = '#1e7e34';
+                msg.textContent = resp.estado === 'pendiente'
+                  ? 'Inscripción registrada, pendiente de aprobación.'
+                  : 'Participante inscripto correctamente.';
+              } else {
+                msg.style.background = '#fdecea';
+                msg.style.color = '#c0392b';
+                msg.textContent = resp.error;
+              }
+            })
+            .catch(function () {
+              msg.style.display = 'block';
+              msg.style.background = '#fdecea';
+              msg.style.color = '#c0392b';
+              msg.textContent = 'No se pudo conectar con el servidor. Intentá nuevamente.';
+            });
+        });
+      });
+  </script>
+
+</body>
+</html>
